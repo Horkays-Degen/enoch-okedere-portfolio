@@ -1,0 +1,28 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Claude local settings (project-specific, don't share)
+.claude/settings.local.json
+
+# Node (future-proofing)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build output (future-proofing)
+dist/
+build/
+.next/
+.cache/
+
+# Env
+.env
+.env.local
+.env.*.local

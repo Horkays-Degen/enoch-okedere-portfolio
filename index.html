@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enoch Okedere · Web3 Creator & Educator</title>
+  <meta name="description" content="Web3 content creator, educator, and community builder. 10K+ YouTube subscribers in 8 months. Cologne, Germany." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAV (Floating Pill) -->
+  <nav id="nav">
+    <div class="nav-pill">
+      <a href="#" class="nav-avatar" aria-label="Enoch Okedere">
+        <img src="assets/photo.jpg" alt="" />
+        <span class="nav-status-dot" aria-label="Available for collabs"></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#content">Content</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#ecosystem">Ecosystem</a></li>
+        <li><a href="#stack">Stack</a></li>
+      </ul>
+      <a href="https://t.me/kryptickryp" target="_blank" rel="noopener" class="nav-cta">Join Community</a>
+      <button class="nav-burger" id="burger" aria-label="Menu">
+        <span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-drawer" id="drawer">
+      <a href="#work" class="d-link">Work</a>
+      <a href="#content" class="d-link">Content</a>
+      <a href="#about" class="d-link">About</a>
+      <a href="#ecosystem" class="d-link">Ecosystem</a>
+      <a href="#stack" class="d-link">Stack</a>
+      <a href="https://t.me/kryptickryp" target="_blank" rel="noopener" class="d-link accent">Join Community ↗</a>
+    </div>
+  </nav>
+
+  <!-- HERO (Cinematic centered) -->
+  <section id="hero">
+    <div class="hero-mesh" aria-hidden="true"></div>
+
+    <div class="hero-inner">
+
+      <div class="hero-status">
+        <span class="status-dot"></span>
+        Available for collabs · Cologne, DE
+      </div>
+
+      <div class="hero-photo-circle">
+        <img src="assets/photo.jpg" alt="Enoch Okedere at a Web3 event" />
+        <div class="hero-photo-glow" aria-hidden="true"></div>
+      </div>
+
+      <p class="hero-eyebrow">[ Web3 creator · educator · vibecoder ]</p>
+
+      <h1 class="hero-name">
+        Enoch <span class="serif-italic">Okedere</span><span class="hero-dot">.</span>
+      </h1>
+
+      <p class="hero-bio">
+        I've been in Web3 since 2021, turning complex blockchain concepts into content people actually understand. Former English teacher, now building <em>real things</em> in public.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#work" class="btn-primary">See my work →</a>
+        <a href="https://youtube.com/@enochokedere" target="_blank" rel="noopener" class="btn-secondary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+          Watch on YouTube
+        </a>
+      </div>
+
+      <div class="hero-socials">
+        <a href="https://youtube.com/@enochokedere" target="_blank" rel="noopener" aria-label="YouTube" class="social-ic">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+        </a>
+        <a href="https://x.com/horkays" target="_blank" rel="noopener" aria-label="X / Twitter" class="social-ic">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="https://t.me/horkays" target="_blank" rel="noopener" aria-label="Telegram" class="social-ic">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+        </a>
+        <a href="https://discord.com/users/horkays" target="_blank" rel="noopener" aria-label="Discord" class="social-ic">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057c.001.022.015.041.031.055a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Brand strip -->
+    <div class="hero-brands">
+      <span class="brand-label">Trusted by</span>
+      <span class="brand-tag">Billions Network</span>
+      <span class="brand-tag">KiiChain</span>
+      <span class="brand-tag">Solana</span>
+      <span class="brand-tag">Abstract</span>
+      <span class="brand-tag">Polygon</span>
+      <span class="brand-tag">TON</span>
+      <span class="brand-tag">Ethereum</span>
+    </div>
+  </section>
+
+  <!-- STATS ROW -->
+  <section class="stats-row">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-num">10K+</span>
+          <span class="stat-label">YouTube Subscribers</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">8 mo</span>
+          <span class="stat-label">To Monetization</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">400+</span>
+          <span class="stat-label">CT Accounts in CTWC</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">5×</span>
+          <span class="stat-label">Yapper of the Week</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK / PROJECTS -->
+  <section id="work" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">[ Selected Work ]</span>
+        <h2 class="section-title">Things <span class="serif-italic">I've built</span></h2>
+      </div>
+
+      <div class="work-filters">
+        <button data-filter="all" class="filter-tab active">All</button>
+        <button data-filter="vibe-coded" class="filter-tab">Vibe Coded</button>
+        <button data-filter="brand" class="filter-tab">Brand Collabs</button>
+        <button data-filter="community" class="filter-tab">Community</button>
+      </div>
+
+      <div class="work-grid">
+
+        <!-- CTWC Featured -->
+        <div class="work-card work-featured" data-cat="vibe-coded community">
+          <div class="wc-image">
+            <img src="assets/ctwc.png" alt="CTWC - Crypto Twitter World Cup" class="wc-img" />
+            <div class="wc-overlay">
+              <a href="https://ctworldcup.xyz/" target="_blank" rel="noopener" class="wc-launch">
+                Visit Site ↗
+              </a>
+            </div>
+          </div>
+          <div class="wc-info">
+            <div class="wc-meta">
+              <span class="wc-tag">Viral Campaign</span>
+              <span class="wc-tag">Vibe Coded</span>
+              <span class="wc-year">2026</span>
+            </div>
+            <h3 class="wc-title">Crypto Twitter World Cup</h3>
+            <p class="wc-desc">Designed and ran a bracket-style tournament across Crypto Twitter, engaging 400+ accounts in a gamified community activation that went viral. Built the bracket platform from scratch. CTWC is now live at ctworldcup.xyz.</p>
+            <div class="wc-stack">
+              <span>Community Activation</span>
+              <span>Gamification</span>
+              <span>400+ Participants</span>
+              <span>Viral Strategy</span>
+            </div>
+            <a href="https://ctworldcup.xyz/" target="_blank" rel="noopener" class="wc-cta">
+              ctworldcup.xyz ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- SpinDrop -->
+        <div class="work-card work-half" data-cat="vibe-coded">
+          <div class="wc-image wc-image-sm">
+            <img src="assets/spindrop.png" alt="SpinDrop App" class="wc-img wc-img-contain" />
+            <div class="wc-overlay">
+              <a href="https://spindrop-omega.vercel.app/" target="_blank" rel="noopener" class="wc-launch">
+                Launch App ↗
+              </a>
+            </div>
+          </div>
+          <div class="wc-info">
+            <div class="wc-meta">
+              <span class="wc-tag live-tag">Live</span>
+              <span class="wc-tag">Vibe Coded</span>
+              <span class="wc-year">2026</span>
+            </div>
+            <h3 class="wc-title">SpinDrop</h3>
+            <p class="wc-desc">A vibe-coded spin-to-win Web3 game. Built and shipped in public, live on Vercel.</p>
+            <div class="wc-stack">
+              <span>Web App</span>
+              <span>Game</span>
+              <span>Vercel</span>
+            </div>
+            <a href="https://spindrop-omega.vercel.app/" target="_blank" rel="noopener" class="wc-cta">
+              spindrop-omega.vercel.app ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Billions Network Intern -->
+        <div class="work-card work-half work-billions" data-cat="community brand">
+          <div class="wc-image wc-image-sm billions-img">
+            <div class="billions-visual">
+              <div class="bv-ring r1"></div>
+              <div class="bv-ring r2"></div>
+              <div class="bv-core">BN</div>
+              <div class="bv-badge">5× Yapper ⭐</div>
+            </div>
+          </div>
+          <div class="wc-info">
+            <div class="wc-meta">
+              <span class="wc-tag">Intern</span>
+              <span class="wc-tag">Community</span>
+              <span class="wc-year">2026 – Present</span>
+            </div>
+            <h3 class="wc-title">Billions Network</h3>
+            <p class="wc-desc">Community Intern for one of Crypto Twitter's most active Web3 communities. Recognized 5× as Yapper of the Week and featured by the official Billions Network account for educational content and ecosystem onboarding.</p>
+            <div class="wc-stack">
+              <span>Content Strategy</span>
+              <span>Onboarding</span>
+              <span>Featured by Official Account</span>
+            </div>
+            <a href="https://x.com/billions_ntwk/status/1974173767548248418" target="_blank" rel="noopener" class="wc-cta">
+              View featured post ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- KiiChain Collab -->
+        <div class="work-card work-kii" data-cat="brand">
+          <div class="wc-info">
+            <div class="wc-meta">
+              <span class="wc-tag">Brand Collab</span>
+              <span class="wc-tag">Video Campaign</span>
+              <span class="wc-year">2026 – Present</span>
+            </div>
+            <h3 class="wc-title">KiiChain & Multi-Chain Campaigns</h3>
+            <p class="wc-desc">Brand collaborator and video campaign creator for KiiChain and multiple Web3 protocols. Won video content campaigns across the Solana, Polygon, and TON ecosystems, bringing real storytelling to protocol-level partnerships.</p>
+            <div class="wc-stack">
+              <span>KiiChain</span>
+              <span>Solana</span>
+              <span>Polygon</span>
+              <span>TON</span>
+              <span>Brand Video</span>
+            </div>
+          </div>
+          <div class="kii-chains">
+            <div class="chain-bubble">◎ Solana</div>
+            <div class="chain-bubble">⬡ Polygon</div>
+            <div class="chain-bubble">◈ TON</div>
+            <div class="chain-bubble kii-main">KII</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENT HUB -->
+  <section id="content" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">[ Selected Content ]</span>
+        <h2 class="section-title">Teaching Web3 through <span class="serif-italic">storytelling</span></h2>
+      </div>
+
+      <div class="content-grid">
+
+        <!-- YouTube Featured Video -->
+        <div class="content-video-wrap">
+          <div class="video-label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+            Featured Video
+          </div>
+          <div class="video-frame">
+            <iframe
+              src="https://www.youtube.com/embed/gGQcsEHpg-w"
+              title="The Future of Digital Identity · Enoch Okedere"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy">
+            </iframe>
+          </div>
+          <div class="video-caption">The Future of Digital Identity · Billions Network Education</div>
+        </div>
+
+        <!-- X Posts Grid -->
+        <div class="posts-grid">
+          <p class="posts-label">Selected posts from <a href="https://x.com/horkays" target="_blank" rel="noopener">@horkays</a></p>
+
+          <a href="https://x.com/horkays/status/1957871736264773798" target="_blank" rel="noopener" class="post-card">
+            <div class="post-header">
+              <span class="post-type">Partnership</span>
+              <span class="post-arrow">↗</span>
+            </div>
+            <p class="post-text">Billions × Kaito visual storytelling collab. Featured by the official Billions Network account.</p>
+            <span class="post-tag">@horkays · Featured</span>
+          </a>
+
+          <a href="https://x.com/horkays/status/1979205166617301117" target="_blank" rel="noopener" class="post-card">
+            <div class="post-header">
+              <span class="post-type">Strategy Thread</span>
+              <span class="post-arrow">↗</span>
+            </div>
+            <p class="post-text">Newcomer positioning guide: how to enter a Web3 ecosystem, build presence, and grow from zero.</p>
+            <span class="post-tag">@horkays · Education</span>
+          </a>
+
+          <a href="https://x.com/horkays/status/2019842843767103884" target="_blank" rel="noopener" class="post-card">
+            <div class="post-header">
+              <span class="post-type">Livestream</span>
+              <span class="post-arrow">↗</span>
+            </div>
+            <p class="post-text">Badge acquisition livestream: how to secure your Premium Badge. Step-by-step live walkthrough.</p>
+            <span class="post-tag">@horkays · Tutorial</span>
+          </a>
+
+          <a href="https://x.com/horkays/status/1972649499970744687" target="_blank" rel="noopener" class="post-card">
+            <div class="post-header">
+              <span class="post-type">IRL Onboarding</span>
+              <span class="post-arrow">↗</span>
+            </div>
+            <p class="post-text">Real-world onboarding initiative: introducing people to Private Proof of Humanity in physical environments.</p>
+            <span class="post-tag">@horkays · Community</span>
+          </a>
+
+          <a href="https://x.com/horkays/status/2012510258707550676" target="_blank" rel="noopener" class="post-card">
+            <div class="post-header">
+              <span class="post-type">X Space</span>
+              <span class="post-arrow">↗</span>
+            </div>
+            <p class="post-text">Strategic update Space: hosting live ecosystem discussions and keeping the community informed.</p>
+            <span class="post-tag">@horkays · Community Lead</span>
+          </a>
+
+          <a href="https://x.com/horkays/status/1975469592299585709" target="_blank" rel="noopener" class="post-card">
+            <div class="post-header">
+              <span class="post-type">Guide</span>
+              <span class="post-arrow">↗</span>
+            </div>
+            <p class="post-text">Supermask roles guide: breaking down ecosystem roles, how to qualify, and what each one means.</p>
+            <span class="post-tag">@horkays · Education</span>
+          </a>
+
+        </div>
+      </div>
+
+      <div class="content-footer">
+        <a href="https://youtube.com/@enochokedere" target="_blank" rel="noopener" class="btn-secondary">
+          All videos on YouTube ↗
+        </a>
+        <a href="https://x.com/horkays" target="_blank" rel="noopener" class="btn-secondary">
+          All posts on X ↗
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-left">
+          <span class="section-eyebrow">[ About Me ]</span>
+          <h2 class="section-title">From the classroom to the <span class="serif-italic">blockchain</span></h2>
+          <div class="about-body">
+            <p>I spent 6 years as an English language teacher (2016–2022), getting really good at one thing: making hard things easy to understand. That skill transferred directly into Web3.</p>
+            <p>Since 2021 I've been creating content across DeFi, NFTs, Layer 1/L2 infrastructure, AI, identity, and privacy. In September 2024 I launched a new YouTube channel. By April 2025 it had 10,000+ subscribers and was monetized. That's 8 months.</p>
+            <p>I'm a community intern at Billions Network, a brand collaborator for KiiChain and other protocols, and the creator of the Crypto Twitter World Cup. I vibe-code tools, explore ecosystems early, and I believe the best way to grow Web3 is to make it impossible not to understand.</p>
+          </div>
+          <div class="about-tags">
+            <span>Web3 Educator</span>
+            <span>Content Creator</span>
+            <span>Community Builder</span>
+            <span>Vibecoder</span>
+            <span>DeFi Explorer</span>
+            <span>Brand Collab</span>
+            <span>Former Teacher</span>
+            <span>Cologne, Germany</span>
+          </div>
+        </div>
+        <div class="about-right">
+          <div class="timeline">
+            <div class="tl-item">
+              <div class="tl-dot active"></div>
+              <div class="tl-content">
+                <span class="tl-date">2026 – Present</span>
+                <h4>Community Intern · Billions Network</h4>
+                <p>Supporting ecosystem growth, content strategy, and social engagement. 5× Yapper of the Week.</p>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot active"></div>
+              <div class="tl-content">
+                <span class="tl-date">2026 – Present</span>
+                <h4>Brand Collaborator · KiiChain & Protocols</h4>
+                <p>Video campaigns and brand awareness across KiiChain, Solana, Polygon, and TON.</p>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <div class="tl-content">
+                <span class="tl-date">Sep 2024 – Present</span>
+                <h4>YouTube Creator · @enochokedere</h4>
+                <p>10K+ subscribers. Monetized in 8 months. Visual Web3 education for everyday people.</p>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <div class="tl-content">
+                <span class="tl-date">2021 – Present</span>
+                <h4>Web3 Content Creator</h4>
+                <p>5+ years across DeFi, NFTs, L1/L2, AI, identity, and gaming. Multiple platforms, multiple chains.</p>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot past"></div>
+              <div class="tl-content">
+                <span class="tl-date">2016 – 2022</span>
+                <h4>English Language Teacher</h4>
+                <p>6 years making complex subjects simple and accessible. The foundation of everything I do.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ECOSYSTEM / GAMFI -->
+  <section id="ecosystem" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">[ Active Onchain ]</span>
+        <h2 class="section-title">Ecosystems I <span class="serif-italic">live in</span></h2>
+      </div>
+
+      <div class="eco-grid">
+
+        <!-- GameFi -->
+        <div class="eco-card eco-featured">
+          <div class="eco-label">GameFi</div>
+          <h3 class="eco-name">Abstract Ecosystem</h3>
+          <p class="eco-desc">Actively playing and farming in the Abstract blockchain gaming ecosystem, including <strong>Onchain Heroes</strong> and <strong>Tollan Universe</strong>. Exploring GameFi from the inside.</p>
+          <div class="eco-games">
+            <div class="game-pill">⚔️ Onchain Heroes</div>
+            <div class="game-pill">🌍 Tollan Universe</div>
+          </div>
+        </div>
+
+        <div class="eco-card">
+          <div class="eco-label">GameFi</div>
+          <h3 class="eco-name">Polygon Gaming</h3>
+          <p class="eco-desc">Deep in the <strong>Medieval Empires</strong> ecosystem on Polygon. Strategy gaming meets onchain ownership.</p>
+          <div class="eco-games">
+            <div class="game-pill">🏰 Medieval Empires</div>
+          </div>
+        </div>
+
+        <div class="eco-card">
+          <div class="eco-label">Layer 1</div>
+          <h3 class="eco-name">KiiChain</h3>
+          <p class="eco-desc">Early explorer and brand partner. Video campaigns, ecosystem education, and community onboarding from genesis.</p>
+          <div class="eco-games">
+            <div class="game-pill">Brand Partner</div>
+            <div class="game-pill">Early Explorer</div>
+          </div>
+        </div>
+
+        <div class="eco-card">
+          <div class="eco-label">DeFi & NFT</div>
+          <h3 class="eco-name">Solana</h3>
+          <p class="eco-desc">Active in Solana DeFi protocols and NFT ecosystem. Won video content campaigns across the Solana ecosystem.</p>
+          <div class="eco-games">
+            <div class="game-pill">DeFi</div>
+            <div class="game-pill">Campaign Winner</div>
+          </div>
+        </div>
+
+        <div class="eco-card">
+          <div class="eco-label">Identity</div>
+          <h3 class="eco-name">Billions Network</h3>
+          <p class="eco-desc">Privacy-first human verification. Creating educational content, onboarding users, and helping grow the network toward hundreds of millions of verified users.</p>
+          <div class="eco-games">
+            <div class="game-pill">2.4M+ Users</div>
+            <div class="game-pill">Intern</div>
+          </div>
+        </div>
+
+        <div class="eco-card">
+          <div class="eco-label">L2 · GameFi</div>
+          <h3 class="eco-name">TON & Ethereum</h3>
+          <p class="eco-desc">Exploring TON's GameFi and mini-app ecosystem plus Ethereum L2s, restaking protocols, and identity systems.</p>
+          <div class="eco-games">
+            <div class="game-pill">TON</div>
+            <div class="game-pill">Ethereum L2</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- STACK / AFFILIATES -->
+  <section id="stack" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">[ Horkays Stack ]</span>
+        <h2 class="section-title">Tools I use &amp; <span class="serif-italic">recommend</span></h2>
+        <p class="section-sub">Everything below is something I actively use or have personally tested. Referral links support the channel, and most come with a bonus for you too.</p>
+      </div>
+
+      <div class="stack-grid">
+
+        <!-- Opus Clip -->
+        <a href="https://www.opus.pro/?via=okes" target="_blank" rel="noopener" class="stack-card reveal">
+          <div class="sk-top">
+            <span class="sk-icon">🎬</span>
+            <span class="sk-cat sk-cat-creator">Creator Tool</span>
+          </div>
+          <h3 class="sk-name">Opus Clip</h3>
+          <p class="sk-desc">Turn long-form videos into viral short clips with AI. The tool I use to repurpose YouTube content for X and other platforms.</p>
+          <div class="sk-bonus">✦ Affiliate bonus with link</div>
+          <span class="sk-cta">Get access ↗</span>
+        </a>
+
+        <!-- Xeet -->
+        <a href="https://www.xeet.ai/refer/horkays" target="_blank" rel="noopener" class="stack-card reveal">
+          <div class="sk-top">
+            <span class="sk-icon">✍️</span>
+            <span class="sk-cat sk-cat-creator">Creator Platform</span>
+          </div>
+          <h3 class="sk-name">Xeet</h3>
+          <p class="sk-desc">Creator-native publishing and monetization platform. Built for the next wave of Web3 content creators.</p>
+          <div class="sk-bonus">✦ Join via referral</div>
+          <span class="sk-cta">Join Xeet ↗</span>
+        </a>
+
+        <!-- TopStrike -->
+        <a href="https://play.topstrike.io?invite=PYTWZUV3" target="_blank" rel="noopener" class="stack-card reveal">
+          <div class="sk-top">
+            <span class="sk-icon">⚽</span>
+            <span class="sk-cat sk-cat-gaming">GameFi</span>
+          </div>
+          <h3 class="sk-name">TopStrike</h3>
+          <p class="sk-desc">Football card trading game on MegaETH terminal. Collect, trade, and compete with real onchain assets.</p>
+          <div class="sk-bonus">✦ Invite code: PYTWZUV3</div>
+          <span class="sk-cta">Play now ↗</span>
+        </a>
+
+        <!-- Binance -->
+        <a href="https://www.binance.com/register?ref=IB7JZ054" target="_blank" rel="noopener" class="stack-card reveal">
+          <div class="sk-top">
+            <span class="sk-icon">🔶</span>
+            <span class="sk-cat sk-cat-exchange">Exchange</span>
+          </div>
+          <h3 class="sk-name">Binance</h3>
+          <p class="sk-desc">World's largest crypto exchange. Spot, futures, staking, and more. My go-to CEX for trading and on/off ramps.</p>
+          <div class="sk-bonus">✦ Referral bonus on signup</div>
+          <span class="sk-cta">Sign up ↗</span>
+        </a>
+
+        <!-- Bybit -->
+        <a href="https://partner.bybit.com/b/120561" target="_blank" rel="noopener" class="stack-card reveal">
+          <div class="sk-top">
+            <span class="sk-icon">🟡</span>
+            <span class="sk-cat sk-cat-exchange">Exchange</span>
+          </div>
+          <h3 class="sk-name">Bybit</h3>
+          <p class="sk-desc">Claim $30K+ in welcome rewards. Derivatives, spot trading, and Web3 tools on one platform.</p>
+          <div class="sk-bonus">✦ Up to $30K welcome bonus</div>
+          <span class="sk-cta">Claim rewards ↗</span>
+        </a>
+
+        <!-- Revolut -->
+        <a href="https://revolut.com/referral/?referral-code=okedere!MAY2-26-AR-H1&amp;geo-redirect" target="_blank" rel="noopener" class="stack-card reveal">
+          <div class="sk-top">
+            <span class="sk-icon">💳</span>
+            <span class="sk-cat sk-cat-fintech">Fintech</span>
+          </div>
+          <h3 class="sk-name">Revolut</h3>
+          <p class="sk-desc">The finance super-app used by 70M+ people. Banking, crypto, and international transfers, all in one.</p>
+          <div class="sk-bonus">✦ Join 70M+ Revolut users</div>
+          <span class="sk-cta">Sign up ↗</span>
+        </a>
+
+        <!-- Billions Wallet -->
+        <a href="https://wallet.billions.network/ref/UK3TNHFBOW" target="_blank" rel="noopener" class="stack-card reveal">
+          <div class="sk-top">
+            <span class="sk-icon">🪪</span>
+            <span class="sk-cat sk-cat-identity">Identity</span>
+          </div>
+          <h3 class="sk-name">Billions Wallet</h3>
+          <p class="sk-desc">First human &amp; AI network. ZK proofs, privacy-first identity. Get rewarded just for being a verified human.</p>
+          <div class="sk-bonus">✦ Limited referral rewards</div>
+          <span class="sk-cta">Join network ↗</span>
+        </a>
+
+        <!-- Tria Wallet -->
+        <a href="https://app.tria.so/?accessCode=30T0TM40OP" target="_blank" rel="noopener" class="stack-card reveal">
+          <div class="sk-top">
+            <span class="sk-icon">🔐</span>
+            <span class="sk-cat sk-cat-identity">DeFi Wallet</span>
+          </div>
+          <h3 class="sk-name">Tria Wallet</h3>
+          <p class="sk-desc">Non-custodial wallet. Trade, earn yield, and spend crypto in the real world. Seamless cross-chain UX.</p>
+          <div class="sk-bonus">✦ Access code: 30T0TM40OP</div>
+          <span class="sk-cta">Get access ↗</span>
+        </a>
+
+        <!-- SoSoValue -->
+        <a href="https://sosovalue.com/join/86UQF1AW" target="_blank" rel="noopener" class="stack-card reveal">
+          <div class="sk-top">
+            <span class="sk-icon">📊</span>
+            <span class="sk-cat sk-cat-research">Research</span>
+          </div>
+          <h3 class="sk-name">SoSoValue</h3>
+          <p class="sk-desc">Powerful crypto research and analytics platform. Unlock all features for free. 30K EXP bonus on signup.</p>
+          <div class="sk-bonus">✦ 30,000 EXP on signup</div>
+          <span class="sk-cta">Get EXP ↗</span>
+        </a>
+
+        <!-- SoDEX -->
+        <a href="https://sodex.com/join/OKES" target="_blank" rel="noopener" class="stack-card reveal">
+          <div class="sk-top">
+            <span class="sk-icon">📈</span>
+            <span class="sk-cat sk-cat-research">DEX</span>
+          </div>
+          <h3 class="sk-name">SoDEX</h3>
+          <p class="sk-desc">Trade top crypto and stocks on SoDEX. Share 1M SoPoints weekly rewards. 5% Boost with my code.</p>
+          <div class="sk-bonus">✦ 5% SoPoints Boost · Code: OKES</div>
+          <span class="sk-cta">Join mainnet ↗</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FLOATING TELEGRAM -->
+  <a href="https://t.me/kryptickryp" target="_blank" rel="noopener" class="tg-float" aria-label="Join Kryptic Krypto on Telegram">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+    Join Community
+  </a>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <p class="f-name">Enoch Okedere</p>
+          <p class="f-sub">Web3 Creator · Educator · Vibecoder<br />Cologne, Germany</p>
+        </div>
+        <div class="footer-links">
+          <div class="fl-col">
+            <span class="fl-head">Content</span>
+            <a href="https://youtube.com/@enochokedere" target="_blank" rel="noopener">YouTube</a>
+            <a href="https://x.com/horkays" target="_blank" rel="noopener">X / Twitter</a>
+            <a href="https://t.me/horkays" target="_blank" rel="noopener">Telegram</a>
+          </div>
+          <div class="fl-col">
+            <span class="fl-head">Projects</span>
+            <a href="https://ctworldcup.xyz/" target="_blank" rel="noopener">CTWC</a>
+            <a href="https://spindrop-omega.vercel.app/" target="_blank" rel="noopener">SpinDrop</a>
+          </div>
+          <div class="fl-col">
+            <span class="fl-head">Connect</span>
+            <a href="https://x.com/horkays" target="_blank" rel="noopener">@horkays on X</a>
+            <a href="https://discord.com/users/horkays" target="_blank" rel="noopener">OKES on Discord</a>
+            <a href="https://t.me/kryptickryp" target="_blank" rel="noopener">Kryptic Krypto TG</a>
+          </div>
+          <div class="fl-col">
+            <span class="fl-head">My Stack</span>
+            <a href="https://www.opus.pro/?via=okes" target="_blank" rel="noopener">Opus Clip</a>
+            <a href="https://wallet.billions.network/ref/UK3TNHFBOW" target="_blank" rel="noopener">Billions Wallet</a>
+            <a href="#stack">View all tools ↗</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Enoch Okedere</span>
+        <span>Vibecoded with intent · Cologne, DE</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
