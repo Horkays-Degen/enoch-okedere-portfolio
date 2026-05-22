@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "portfolio",
-      "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "3456", "--directory", "/Users/hallelujah/Desktop/Enoch Okedere Portofolio"],
+      "runtimeExecutable": "/usr/bin/python3",
+      "runtimeArgs": ["-c", "import os; os.chdir('/Users/hallelujah/Desktop/Enoch Okedere Portofolio'); from http.server import HTTPServer, SimpleHTTPRequestHandler; HTTPServer(('', 3456), SimpleHTTPRequestHandler).serve_forever()"],
       "port": 3456
     }
   ]

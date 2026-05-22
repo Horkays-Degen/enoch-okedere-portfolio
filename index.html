@@ -5,12 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Enoch Okedere · Web3 Creator & Educator</title>
   <meta name="description" content="Web3 content creator, educator, and community builder. 10K+ YouTube subscribers in 8 months. Cologne, Germany." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/favicon.svg" />
+  <meta name="theme-color" content="#0a0a0a" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Enoch Okedere · Web3 Creator & Educator" />
+  <meta property="og:description" content="Web3 creator, educator, vibecoder. Building real things in public since 2021." />
+  <meta property="og:url" content="https://enochokedere.com" />
+  <meta property="og:type" content="website" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
+  <!-- AMBIENT BACKGROUND — dimmed work imagery drifting behind everything -->
+  <div class="bg-marquee" aria-hidden="true">
+    <div class="bg-row bg-row-1">
+      <div class="bg-tile"><img src="assets/ctwc.png" alt="" /></div>
+      <div class="bg-tile bg-gradient-1"></div>
+      <div class="bg-tile"><img src="assets/spindrop.png" alt="" /></div>
+      <div class="bg-tile bg-gradient-2"></div>
+      <div class="bg-tile"><img src="assets/ctwc.png" alt="" /></div>
+      <div class="bg-tile bg-gradient-3"></div>
+      <!-- duplicate for seamless loop -->
+      <div class="bg-tile"><img src="assets/ctwc.png" alt="" /></div>
+      <div class="bg-tile bg-gradient-1"></div>
+      <div class="bg-tile"><img src="assets/spindrop.png" alt="" /></div>
+      <div class="bg-tile bg-gradient-2"></div>
+      <div class="bg-tile"><img src="assets/ctwc.png" alt="" /></div>
+      <div class="bg-tile bg-gradient-3"></div>
+    </div>
+    <div class="bg-row bg-row-2">
+      <div class="bg-tile bg-gradient-2"></div>
+      <div class="bg-tile"><img src="assets/spindrop.png" alt="" /></div>
+      <div class="bg-tile bg-gradient-3"></div>
+      <div class="bg-tile"><img src="assets/ctwc.png" alt="" /></div>
+      <div class="bg-tile bg-gradient-1"></div>
+      <div class="bg-tile"><img src="assets/spindrop.png" alt="" /></div>
+      <!-- duplicate for seamless loop -->
+      <div class="bg-tile bg-gradient-2"></div>
+      <div class="bg-tile"><img src="assets/spindrop.png" alt="" /></div>
+      <div class="bg-tile bg-gradient-3"></div>
+      <div class="bg-tile"><img src="assets/ctwc.png" alt="" /></div>
+      <div class="bg-tile bg-gradient-1"></div>
+      <div class="bg-tile"><img src="assets/spindrop.png" alt="" /></div>
+    </div>
+  </div>
 
   <!-- NAV (Floating Pill) -->
   <nav id="nav">
@@ -41,16 +87,16 @@
     </div>
   </nav>
 
+  <main class="page-stack">
+
+  <!-- ============ HOME PAGE ============ -->
+  <div class="page is-active" data-page="home">
+
   <!-- HERO (Cinematic centered) -->
   <section id="hero">
     <div class="hero-mesh" aria-hidden="true"></div>
 
     <div class="hero-inner">
-
-      <div class="hero-status">
-        <span class="status-dot"></span>
-        Available for collabs · Cologne, DE
-      </div>
 
       <div class="hero-photo-circle">
         <img src="assets/photo.jpg" alt="Enoch Okedere at a Web3 event" />
@@ -92,16 +138,29 @@
 
     </div>
 
-    <!-- Brand strip -->
-    <div class="hero-brands">
-      <span class="brand-label">Trusted by</span>
-      <span class="brand-tag">Billions Network</span>
-      <span class="brand-tag">KiiChain</span>
-      <span class="brand-tag">Solana</span>
-      <span class="brand-tag">Abstract</span>
-      <span class="brand-tag">Polygon</span>
-      <span class="brand-tag">TON</span>
-      <span class="brand-tag">Ethereum</span>
+    <!-- Brand marquee -->
+    <div class="brand-marquee">
+      <span class="marquee-label">Worked with</span>
+      <div class="marquee-viewport">
+        <div class="marquee-track">
+          <!-- Set 1 -->
+          <div class="m-item"><span class="m-mark" data-brand="billions"><img src="assets/icons/billions.png" alt="" loading="lazy" /></span><span class="m-name">Billions Network</span></div>
+          <div class="m-item"><span class="m-mark" data-brand="kiichain"><img src="assets/icons/kiichain.png" alt="" loading="lazy" /></span><span class="m-name">KiiChain</span></div>
+          <div class="m-item"><span class="m-mark" data-brand="solana"><img src="assets/icons/solana.jpg" alt="" loading="lazy" /></span><span class="m-name">Solana</span></div>
+          <div class="m-item"><span class="m-mark" data-brand="abstract"><img src="assets/icons/abstract.jpg" alt="" loading="lazy" /></span><span class="m-name">Abstract</span></div>
+          <div class="m-item"><span class="m-mark" data-brand="polygon"><img src="assets/icons/polygon.jpeg" alt="" loading="lazy" /></span><span class="m-name">Polygon</span></div>
+          <div class="m-item"><span class="m-mark" data-brand="ton"><img src="assets/icons/TON.webp" alt="" loading="lazy" /></span><span class="m-name">TON</span></div>
+          <div class="m-item"><span class="m-mark" data-brand="ethereum"><img src="assets/icons/ethereum.png" alt="" loading="lazy" /></span><span class="m-name">Ethereum</span></div>
+          <!-- Set 2 (duplicate for seamless loop) -->
+          <div class="m-item" aria-hidden="true"><span class="m-mark" data-brand="billions"><img src="assets/icons/billions.png" alt="" loading="lazy" /></span><span class="m-name">Billions Network</span></div>
+          <div class="m-item" aria-hidden="true"><span class="m-mark" data-brand="kiichain"><img src="assets/icons/kiichain.png" alt="" loading="lazy" /></span><span class="m-name">KiiChain</span></div>
+          <div class="m-item" aria-hidden="true"><span class="m-mark" data-brand="solana"><img src="assets/icons/solana.jpg" alt="" loading="lazy" /></span><span class="m-name">Solana</span></div>
+          <div class="m-item" aria-hidden="true"><span class="m-mark" data-brand="abstract"><img src="assets/icons/abstract.jpg" alt="" loading="lazy" /></span><span class="m-name">Abstract</span></div>
+          <div class="m-item" aria-hidden="true"><span class="m-mark" data-brand="polygon"><img src="assets/icons/polygon.jpeg" alt="" loading="lazy" /></span><span class="m-name">Polygon</span></div>
+          <div class="m-item" aria-hidden="true"><span class="m-mark" data-brand="ton"><img src="assets/icons/TON.webp" alt="" loading="lazy" /></span><span class="m-name">TON</span></div>
+          <div class="m-item" aria-hidden="true"><span class="m-mark" data-brand="ethereum"><img src="assets/icons/ethereum.png" alt="" loading="lazy" /></span><span class="m-name">Ethereum</span></div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -129,8 +188,13 @@
     </div>
   </section>
 
+  </div><!-- /home -->
+
+  <!-- ============ WORK PAGE ============ -->
+  <div class="page" data-page="work">
+
   <!-- WORK / PROJECTS -->
-  <section id="work" class="section">
+  <section id="work-section" class="section">
     <div class="container">
       <div class="section-header">
         <span class="section-eyebrow">[ Selected Work ]</span>
@@ -146,16 +210,17 @@
 
       <div class="work-grid">
 
-        <!-- CTWC Featured -->
-        <div class="work-card work-featured" data-cat="vibe-coded community">
-          <div class="wc-image">
-            <img src="assets/ctwc.png" alt="CTWC - Crypto Twitter World Cup" class="wc-img" />
-            <div class="wc-overlay">
-              <a href="https://ctworldcup.xyz/" target="_blank" rel="noopener" class="wc-launch">
-                Visit Site ↗
-              </a>
-            </div>
-          </div>
+        <!-- CTWC -->
+        <div class="work-card" data-cat="vibe-coded community" data-brand="ctwc">
+          <a href="https://ctworldcup.xyz/" target="_blank" rel="noopener" class="wc-visual">
+            <span class="wc-visual-pill">CTWC</span>
+            <svg class="wc-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 14h20l-1 18a9 9 0 0 1-18 0z"/>
+              <path d="M22 18h-4a4 4 0 0 0 4 8M42 18h4a4 4 0 0 1-4 8"/>
+              <path d="M28 40v6l-4 2v4h16v-4l-4-2v-6"/>
+            </svg>
+            <div class="wc-visual-glow"></div>
+          </a>
           <div class="wc-info">
             <div class="wc-meta">
               <span class="wc-tag">Viral Campaign</span>
@@ -163,13 +228,7 @@
               <span class="wc-year">2026</span>
             </div>
             <h3 class="wc-title">Crypto Twitter World Cup</h3>
-            <p class="wc-desc">Designed and ran a bracket-style tournament across Crypto Twitter, engaging 400+ accounts in a gamified community activation that went viral. Built the bracket platform from scratch. CTWC is now live at ctworldcup.xyz.</p>
-            <div class="wc-stack">
-              <span>Community Activation</span>
-              <span>Gamification</span>
-              <span>400+ Participants</span>
-              <span>Viral Strategy</span>
-            </div>
+            <p class="wc-desc">Bracket-style tournament across Crypto Twitter. Engaged 400+ accounts in a gamified community activation that went viral. Built the platform from scratch.</p>
             <a href="https://ctworldcup.xyz/" target="_blank" rel="noopener" class="wc-cta">
               ctworldcup.xyz ↗
             </a>
@@ -177,86 +236,94 @@
         </div>
 
         <!-- SpinDrop -->
-        <div class="work-card work-half" data-cat="vibe-coded">
-          <div class="wc-image wc-image-sm">
-            <img src="assets/spindrop.png" alt="SpinDrop App" class="wc-img wc-img-contain" />
-            <div class="wc-overlay">
-              <a href="https://spindrop-omega.vercel.app/" target="_blank" rel="noopener" class="wc-launch">
-                Launch App ↗
-              </a>
-            </div>
-          </div>
+        <div class="work-card" data-cat="vibe-coded" data-brand="spindrop">
+          <a href="https://spindrop-omega.vercel.app/" target="_blank" rel="noopener" class="wc-visual">
+            <span class="wc-visual-pill">SPINDROP</span>
+            <svg class="wc-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+              <circle cx="32" cy="34" r="20"/>
+              <line x1="32" y1="14" x2="32" y2="54"/>
+              <line x1="12" y1="34" x2="52" y2="34"/>
+              <line x1="17.86" y1="19.86" x2="46.14" y2="48.14"/>
+              <line x1="46.14" y1="19.86" x2="17.86" y2="48.14"/>
+              <circle cx="32" cy="34" r="3.5" fill="currentColor"/>
+              <path d="M32 6 L37 16 L27 16 Z" fill="currentColor" stroke="none"/>
+            </svg>
+            <div class="wc-visual-glow"></div>
+          </a>
           <div class="wc-info">
             <div class="wc-meta">
-              <span class="wc-tag live-tag">Live</span>
+              <span class="wc-tag live-tag">● Live</span>
               <span class="wc-tag">Vibe Coded</span>
               <span class="wc-year">2026</span>
             </div>
             <h3 class="wc-title">SpinDrop</h3>
             <p class="wc-desc">A vibe-coded spin-to-win Web3 game. Built and shipped in public, live on Vercel.</p>
-            <div class="wc-stack">
-              <span>Web App</span>
-              <span>Game</span>
-              <span>Vercel</span>
-            </div>
             <a href="https://spindrop-omega.vercel.app/" target="_blank" rel="noopener" class="wc-cta">
               spindrop-omega.vercel.app ↗
             </a>
           </div>
         </div>
 
-        <!-- Billions Network Intern -->
-        <div class="work-card work-half work-billions" data-cat="community brand">
-          <div class="wc-image wc-image-sm billions-img">
-            <div class="billions-visual">
-              <div class="bv-ring r1"></div>
-              <div class="bv-ring r2"></div>
-              <div class="bv-core">BN</div>
-              <div class="bv-badge">5× Yapper ⭐</div>
-            </div>
-          </div>
+        <!-- Billions Network -->
+        <div class="work-card" data-cat="community brand" data-brand="billions">
+          <a href="https://x.com/billions_ntwk/status/1974173767548248418" target="_blank" rel="noopener" class="wc-visual">
+            <span class="wc-visual-pill">5× YAPPER</span>
+            <svg class="wc-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <!-- Network nodes with center B mark -->
+              <line x1="32" y1="32" x2="14" y2="14" opacity="0.45"/>
+              <line x1="32" y1="32" x2="50" y2="14" opacity="0.45"/>
+              <line x1="32" y1="32" x2="14" y2="50" opacity="0.45"/>
+              <line x1="32" y1="32" x2="50" y2="50" opacity="0.45"/>
+              <line x1="32" y1="32" x2="8" y2="32" opacity="0.45"/>
+              <line x1="32" y1="32" x2="56" y2="32" opacity="0.45"/>
+              <circle cx="14" cy="14" r="3" fill="currentColor" stroke="none"/>
+              <circle cx="50" cy="14" r="3" fill="currentColor" stroke="none"/>
+              <circle cx="14" cy="50" r="3" fill="currentColor" stroke="none"/>
+              <circle cx="50" cy="50" r="3" fill="currentColor" stroke="none"/>
+              <circle cx="8" cy="32" r="2.5" fill="currentColor" stroke="none"/>
+              <circle cx="56" cy="32" r="2.5" fill="currentColor" stroke="none"/>
+              <circle cx="32" cy="32" r="11" fill="rgba(168,85,247,0.18)" stroke="currentColor" stroke-width="1.5"/>
+              <text x="32" y="36.5" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-size="13" font-style="italic" font-weight="700" fill="currentColor" stroke="none">B</text>
+            </svg>
+            <div class="wc-visual-glow"></div>
+          </a>
           <div class="wc-info">
             <div class="wc-meta">
-              <span class="wc-tag">Intern</span>
               <span class="wc-tag">Community</span>
+              <span class="wc-tag">Intern</span>
               <span class="wc-year">2026 – Present</span>
             </div>
             <h3 class="wc-title">Billions Network</h3>
-            <p class="wc-desc">Community Intern for one of Crypto Twitter's most active Web3 communities. Recognized 5× as Yapper of the Week and featured by the official Billions Network account for educational content and ecosystem onboarding.</p>
-            <div class="wc-stack">
-              <span>Content Strategy</span>
-              <span>Onboarding</span>
-              <span>Featured by Official Account</span>
-            </div>
+            <p class="wc-desc">Community Intern for one of Crypto Twitter's most active Web3 communities. 5× Yapper of the Week, featured by the official account for educational content.</p>
             <a href="https://x.com/billions_ntwk/status/1974173767548248418" target="_blank" rel="noopener" class="wc-cta">
               View featured post ↗
             </a>
           </div>
         </div>
 
-        <!-- KiiChain Collab -->
-        <div class="work-card work-kii" data-cat="brand">
+        <!-- KiiChain & Multi-Chain -->
+        <div class="work-card" data-cat="brand" data-brand="kiichain">
+          <div class="wc-visual">
+            <span class="wc-visual-pill">KII · MULTI-CHAIN</span>
+            <svg class="wc-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+              <!-- Three chain links -->
+              <rect x="6" y="22" width="22" height="20" rx="10"/>
+              <rect x="21" y="22" width="22" height="20" rx="10"/>
+              <rect x="36" y="22" width="22" height="20" rx="10"/>
+            </svg>
+            <div class="wc-visual-glow"></div>
+          </div>
           <div class="wc-info">
             <div class="wc-meta">
               <span class="wc-tag">Brand Collab</span>
               <span class="wc-tag">Video Campaign</span>
               <span class="wc-year">2026 – Present</span>
             </div>
-            <h3 class="wc-title">KiiChain & Multi-Chain Campaigns</h3>
-            <p class="wc-desc">Brand collaborator and video campaign creator for KiiChain and multiple Web3 protocols. Won video content campaigns across the Solana, Polygon, and TON ecosystems, bringing real storytelling to protocol-level partnerships.</p>
-            <div class="wc-stack">
-              <span>KiiChain</span>
-              <span>Solana</span>
-              <span>Polygon</span>
-              <span>TON</span>
-              <span>Brand Video</span>
-            </div>
-          </div>
-          <div class="kii-chains">
-            <div class="chain-bubble">◎ Solana</div>
-            <div class="chain-bubble">⬡ Polygon</div>
-            <div class="chain-bubble">◈ TON</div>
-            <div class="chain-bubble kii-main">KII</div>
+            <h3 class="wc-title">KiiChain &amp; Multi-Chain</h3>
+            <p class="wc-desc">Brand collaborator and video campaign creator for KiiChain and multiple Web3 protocols. Won campaigns across Solana, Polygon, and TON.</p>
+            <a href="#" class="wc-cta wc-cta-static">
+              Solana · Polygon · TON · KII
+            </a>
           </div>
         </div>
 
@@ -264,108 +331,102 @@
     </div>
   </section>
 
+  </div><!-- /work -->
+
+  <!-- ============ CONTENT PAGE ============ -->
+  <div class="page" data-page="content">
+
   <!-- CONTENT HUB -->
-  <section id="content" class="section section-alt">
+  <section id="content-section" class="section section-alt">
     <div class="container">
       <div class="section-header">
         <span class="section-eyebrow">[ Selected Content ]</span>
         <h2 class="section-title">Teaching Web3 through <span class="serif-italic">storytelling</span></h2>
       </div>
 
-      <div class="content-grid">
-
-        <!-- YouTube Featured Video -->
-        <div class="content-video-wrap">
-          <div class="video-label">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
-            Featured Video
-          </div>
-          <div class="video-frame">
-            <iframe
-              src="https://www.youtube.com/embed/gGQcsEHpg-w"
-              title="The Future of Digital Identity · Enoch Okedere"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-              loading="lazy">
-            </iframe>
-          </div>
-          <div class="video-caption">The Future of Digital Identity · Billions Network Education</div>
+      <!-- Featured Video -->
+      <div class="featured-video">
+        <div class="featured-label">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+          <span>Featured</span>
         </div>
-
-        <!-- X Posts Grid -->
-        <div class="posts-grid">
-          <p class="posts-label">Selected posts from <a href="https://x.com/horkays" target="_blank" rel="noopener">@horkays</a></p>
-
-          <a href="https://x.com/horkays/status/1957871736264773798" target="_blank" rel="noopener" class="post-card">
-            <div class="post-header">
-              <span class="post-type">Partnership</span>
-              <span class="post-arrow">↗</span>
-            </div>
-            <p class="post-text">Billions × Kaito visual storytelling collab. Featured by the official Billions Network account.</p>
-            <span class="post-tag">@horkays · Featured</span>
-          </a>
-
-          <a href="https://x.com/horkays/status/1979205166617301117" target="_blank" rel="noopener" class="post-card">
-            <div class="post-header">
-              <span class="post-type">Strategy Thread</span>
-              <span class="post-arrow">↗</span>
-            </div>
-            <p class="post-text">Newcomer positioning guide: how to enter a Web3 ecosystem, build presence, and grow from zero.</p>
-            <span class="post-tag">@horkays · Education</span>
-          </a>
-
-          <a href="https://x.com/horkays/status/2019842843767103884" target="_blank" rel="noopener" class="post-card">
-            <div class="post-header">
-              <span class="post-type">Livestream</span>
-              <span class="post-arrow">↗</span>
-            </div>
-            <p class="post-text">Badge acquisition livestream: how to secure your Premium Badge. Step-by-step live walkthrough.</p>
-            <span class="post-tag">@horkays · Tutorial</span>
-          </a>
-
-          <a href="https://x.com/horkays/status/1972649499970744687" target="_blank" rel="noopener" class="post-card">
-            <div class="post-header">
-              <span class="post-type">IRL Onboarding</span>
-              <span class="post-arrow">↗</span>
-            </div>
-            <p class="post-text">Real-world onboarding initiative: introducing people to Private Proof of Humanity in physical environments.</p>
-            <span class="post-tag">@horkays · Community</span>
-          </a>
-
-          <a href="https://x.com/horkays/status/2012510258707550676" target="_blank" rel="noopener" class="post-card">
-            <div class="post-header">
-              <span class="post-type">X Space</span>
-              <span class="post-arrow">↗</span>
-            </div>
-            <p class="post-text">Strategic update Space: hosting live ecosystem discussions and keeping the community informed.</p>
-            <span class="post-tag">@horkays · Community Lead</span>
-          </a>
-
-          <a href="https://x.com/horkays/status/1975469592299585709" target="_blank" rel="noopener" class="post-card">
-            <div class="post-header">
-              <span class="post-type">Guide</span>
-              <span class="post-arrow">↗</span>
-            </div>
-            <p class="post-text">Supermask roles guide: breaking down ecosystem roles, how to qualify, and what each one means.</p>
-            <span class="post-tag">@horkays · Education</span>
-          </a>
-
+        <div class="video-frame">
+          <iframe
+            src="https://www.youtube.com/embed/H2s4ArqUzSs"
+            title="Featured video by Enoch Okedere"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin">
+          </iframe>
         </div>
       </div>
 
-      <div class="content-footer">
-        <a href="https://youtube.com/@enochokedere" target="_blank" rel="noopener" class="btn-secondary">
-          All videos on YouTube ↗
+      <!-- Video Grid (5 more videos) -->
+      <div class="video-grid">
+
+        <a href="https://www.youtube.com/watch?v=HZXXTQXyMZg" target="_blank" rel="noopener" class="video-card">
+          <div class="video-thumb">
+            <img src="https://img.youtube.com/vi/HZXXTQXyMZg/maxresdefault.jpg" alt="Watch video" loading="lazy" onerror="this.src='https://img.youtube.com/vi/HZXXTQXyMZg/hqdefault.jpg'" />
+            <div class="play-overlay">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
         </a>
-        <a href="https://x.com/horkays" target="_blank" rel="noopener" class="btn-secondary">
-          All posts on X ↗
+
+        <a href="https://www.youtube.com/watch?v=nxyEJ60hgJY" target="_blank" rel="noopener" class="video-card">
+          <div class="video-thumb">
+            <img src="https://img.youtube.com/vi/nxyEJ60hgJY/maxresdefault.jpg" alt="Watch video" loading="lazy" onerror="this.src='https://img.youtube.com/vi/nxyEJ60hgJY/hqdefault.jpg'" />
+            <div class="play-overlay">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://www.youtube.com/watch?v=qwrXg0L-4zk" target="_blank" rel="noopener" class="video-card">
+          <div class="video-thumb">
+            <img src="https://img.youtube.com/vi/qwrXg0L-4zk/maxresdefault.jpg" alt="Watch video" loading="lazy" onerror="this.src='https://img.youtube.com/vi/qwrXg0L-4zk/hqdefault.jpg'" />
+            <div class="play-overlay">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://www.youtube.com/watch?v=3uwHMUK-Bvc" target="_blank" rel="noopener" class="video-card">
+          <div class="video-thumb">
+            <img src="https://img.youtube.com/vi/3uwHMUK-Bvc/maxresdefault.jpg" alt="Watch video" loading="lazy" onerror="this.src='https://img.youtube.com/vi/3uwHMUK-Bvc/hqdefault.jpg'" />
+            <div class="play-overlay">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://www.youtube.com/watch?v=AblmWZopkEY" target="_blank" rel="noopener" class="video-card">
+          <div class="video-thumb">
+            <img src="https://img.youtube.com/vi/AblmWZopkEY/maxresdefault.jpg" alt="Watch video" loading="lazy" onerror="this.src='https://img.youtube.com/vi/AblmWZopkEY/hqdefault.jpg'" />
+            <div class="play-overlay">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+        </a>
+
+      </div>
+
+      <div class="content-footer">
+        <a href="https://youtube.com/@enochokedere" target="_blank" rel="noopener" class="btn-primary">
+          All videos on YouTube ↗
         </a>
       </div>
     </div>
   </section>
 
+  </div><!-- /content -->
+
+  <!-- ============ ABOUT PAGE ============ -->
+  <div class="page" data-page="about">
+
   <!-- ABOUT -->
-  <section id="about" class="section">
+  <section id="about-section" class="section">
     <div class="container">
       <div class="about-grid">
         <div class="about-left">
@@ -435,8 +496,13 @@
     </div>
   </section>
 
+  </div><!-- /about -->
+
+  <!-- ============ ECOSYSTEM PAGE ============ -->
+  <div class="page" data-page="ecosystem">
+
   <!-- ECOSYSTEM / GAMFI -->
-  <section id="ecosystem" class="section section-alt">
+  <section id="ecosystem-section" class="section section-alt">
     <div class="container">
       <div class="section-header">
         <span class="section-eyebrow">[ Active Onchain ]</span>
@@ -445,28 +511,45 @@
 
       <div class="eco-grid">
 
-        <!-- GameFi -->
-        <div class="eco-card eco-featured">
-          <div class="eco-label">GameFi</div>
+        <!-- Abstract (Featured) -->
+        <div class="eco-card eco-featured" data-chain="abstract">
+          <div class="eco-head">
+            <div class="eco-icon">
+              <img src="assets/icons/abstract.jpg" alt="Abstract" loading="lazy" />
+            </div>
+            <div class="eco-label">GameFi</div>
+          </div>
           <h3 class="eco-name">Abstract Ecosystem</h3>
           <p class="eco-desc">Actively playing and farming in the Abstract blockchain gaming ecosystem, including <strong>Onchain Heroes</strong> and <strong>Tollan Universe</strong>. Exploring GameFi from the inside.</p>
           <div class="eco-games">
-            <div class="game-pill">⚔️ Onchain Heroes</div>
-            <div class="game-pill">🌍 Tollan Universe</div>
+            <div class="game-pill">Onchain Heroes</div>
+            <div class="game-pill">Tollan Universe</div>
           </div>
         </div>
 
-        <div class="eco-card">
-          <div class="eco-label">GameFi</div>
+        <!-- Polygon -->
+        <div class="eco-card" data-chain="polygon">
+          <div class="eco-head">
+            <div class="eco-icon">
+              <img src="assets/icons/polygon.jpeg" alt="Polygon" loading="lazy" />
+            </div>
+            <div class="eco-label">GameFi</div>
+          </div>
           <h3 class="eco-name">Polygon Gaming</h3>
           <p class="eco-desc">Deep in the <strong>Medieval Empires</strong> ecosystem on Polygon. Strategy gaming meets onchain ownership.</p>
           <div class="eco-games">
-            <div class="game-pill">🏰 Medieval Empires</div>
+            <div class="game-pill">Medieval Empires</div>
           </div>
         </div>
 
-        <div class="eco-card">
-          <div class="eco-label">Layer 1</div>
+        <!-- KiiChain -->
+        <div class="eco-card" data-chain="kiichain">
+          <div class="eco-head">
+            <div class="eco-icon">
+              <img src="assets/icons/kiichain.png" alt="KiiChain" loading="lazy" />
+            </div>
+            <div class="eco-label">Layer 1</div>
+          </div>
           <h3 class="eco-name">KiiChain</h3>
           <p class="eco-desc">Early explorer and brand partner. Video campaigns, ecosystem education, and community onboarding from genesis.</p>
           <div class="eco-games">
@@ -475,18 +558,30 @@
           </div>
         </div>
 
-        <div class="eco-card">
-          <div class="eco-label">DeFi & NFT</div>
+        <!-- Solana -->
+        <div class="eco-card" data-chain="solana">
+          <div class="eco-head">
+            <div class="eco-icon">
+              <img src="assets/icons/solana.jpg" alt="Solana" loading="lazy" />
+            </div>
+            <div class="eco-label">DeFi · NFT</div>
+          </div>
           <h3 class="eco-name">Solana</h3>
-          <p class="eco-desc">Active in Solana DeFi protocols and NFT ecosystem. Won video content campaigns across the Solana ecosystem.</p>
+          <p class="eco-desc">Active in Solana DeFi protocols and the NFT ecosystem. Won video content campaigns across Solana.</p>
           <div class="eco-games">
             <div class="game-pill">DeFi</div>
             <div class="game-pill">Campaign Winner</div>
           </div>
         </div>
 
-        <div class="eco-card">
-          <div class="eco-label">Identity</div>
+        <!-- Billions -->
+        <div class="eco-card" data-chain="billions">
+          <div class="eco-head">
+            <div class="eco-icon">
+              <img src="assets/icons/billions.png" alt="Billions Network" loading="lazy" />
+            </div>
+            <div class="eco-label">Identity</div>
+          </div>
           <h3 class="eco-name">Billions Network</h3>
           <p class="eco-desc">Privacy-first human verification. Creating educational content, onboarding users, and helping grow the network toward hundreds of millions of verified users.</p>
           <div class="eco-games">
@@ -495,9 +590,16 @@
           </div>
         </div>
 
-        <div class="eco-card">
-          <div class="eco-label">L2 · GameFi</div>
-          <h3 class="eco-name">TON & Ethereum</h3>
+        <!-- TON & Ethereum -->
+        <div class="eco-card" data-chain="ton">
+          <div class="eco-head">
+            <div class="eco-icon eco-icon-dual">
+              <img src="assets/icons/TON.webp" alt="TON" loading="lazy" />
+              <img src="assets/icons/ethereum.png" alt="Ethereum" loading="lazy" class="eco-icon-overlay" />
+            </div>
+            <div class="eco-label">L2 · GameFi</div>
+          </div>
+          <h3 class="eco-name">TON &amp; Ethereum</h3>
           <p class="eco-desc">Exploring TON's GameFi and mini-app ecosystem plus Ethereum L2s, restaking protocols, and identity systems.</p>
           <div class="eco-games">
             <div class="game-pill">TON</div>
@@ -509,8 +611,13 @@
     </div>
   </section>
 
+  </div><!-- /ecosystem -->
+
+  <!-- ============ STACK PAGE ============ -->
+  <div class="page" data-page="stack">
+
   <!-- STACK / AFFILIATES -->
-  <section id="stack" class="section">
+  <section id="stack-section" class="section">
     <div class="container">
       <div class="section-header reveal">
         <span class="section-eyebrow">[ Horkays Stack ]</span>
@@ -523,7 +630,7 @@
         <!-- Opus Clip -->
         <a href="https://www.opus.pro/?via=okes" target="_blank" rel="noopener" class="stack-card reveal">
           <div class="sk-top">
-            <span class="sk-icon">🎬</span>
+            <span class="sk-icon"><img src="assets/icons/opusclip.webp" alt="Opus Clip" loading="lazy" /></span>
             <span class="sk-cat sk-cat-creator">Creator Tool</span>
           </div>
           <h3 class="sk-name">Opus Clip</h3>
@@ -535,7 +642,7 @@
         <!-- Xeet -->
         <a href="https://www.xeet.ai/refer/horkays" target="_blank" rel="noopener" class="stack-card reveal">
           <div class="sk-top">
-            <span class="sk-icon">✍️</span>
+            <span class="sk-icon"><img src="assets/icons/xeet.jpg" alt="Xeet" loading="lazy" /></span>
             <span class="sk-cat sk-cat-creator">Creator Platform</span>
           </div>
           <h3 class="sk-name">Xeet</h3>
@@ -544,22 +651,22 @@
           <span class="sk-cta">Join Xeet ↗</span>
         </a>
 
-        <!-- TopStrike -->
-        <a href="https://play.topstrike.io?invite=PYTWZUV3" target="_blank" rel="noopener" class="stack-card reveal">
+        <!-- Sport.fun -->
+        <a href="https://pro.sport.fun/login/?referral_code=UXXHLKG36LA" target="_blank" rel="noopener" class="stack-card reveal">
           <div class="sk-top">
-            <span class="sk-icon">⚽</span>
-            <span class="sk-cat sk-cat-gaming">GameFi</span>
+            <span class="sk-icon"><img src="assets/icons/sportfun.jpg" alt="Sport.fun" loading="lazy" /></span>
+            <span class="sk-cat sk-cat-gaming">GameFi · Base</span>
           </div>
-          <h3 class="sk-name">TopStrike</h3>
-          <p class="sk-desc">Football card trading game on MegaETH terminal. Collect, trade, and compete with real onchain assets.</p>
-          <div class="sk-bonus">✦ Invite code: PYTWZUV3</div>
+          <h3 class="sk-name">Sport.fun</h3>
+          <p class="sk-desc">Football sports prediction on Base. Buy player cards, watch their value rise with real-world performance. Fantasy meets onchain.</p>
+          <div class="sk-bonus">✦ Referral code: UXXHLKG36LA</div>
           <span class="sk-cta">Play now ↗</span>
         </a>
 
         <!-- Binance -->
         <a href="https://www.binance.com/register?ref=IB7JZ054" target="_blank" rel="noopener" class="stack-card reveal">
           <div class="sk-top">
-            <span class="sk-icon">🔶</span>
+            <span class="sk-icon"><img src="assets/icons/binance.jpg" alt="Binance" loading="lazy" /></span>
             <span class="sk-cat sk-cat-exchange">Exchange</span>
           </div>
           <h3 class="sk-name">Binance</h3>
@@ -571,7 +678,7 @@
         <!-- Bybit -->
         <a href="https://partner.bybit.com/b/120561" target="_blank" rel="noopener" class="stack-card reveal">
           <div class="sk-top">
-            <span class="sk-icon">🟡</span>
+            <span class="sk-icon"><img src="assets/icons/bybit.jpg" alt="Bybit" loading="lazy" /></span>
             <span class="sk-cat sk-cat-exchange">Exchange</span>
           </div>
           <h3 class="sk-name">Bybit</h3>
@@ -583,7 +690,7 @@
         <!-- Revolut -->
         <a href="https://revolut.com/referral/?referral-code=okedere!MAY2-26-AR-H1&amp;geo-redirect" target="_blank" rel="noopener" class="stack-card reveal">
           <div class="sk-top">
-            <span class="sk-icon">💳</span>
+            <span class="sk-icon"><img src="assets/icons/revolut.webp" alt="Revolut" loading="lazy" /></span>
             <span class="sk-cat sk-cat-fintech">Fintech</span>
           </div>
           <h3 class="sk-name">Revolut</h3>
@@ -595,7 +702,7 @@
         <!-- Billions Wallet -->
         <a href="https://wallet.billions.network/ref/UK3TNHFBOW" target="_blank" rel="noopener" class="stack-card reveal">
           <div class="sk-top">
-            <span class="sk-icon">🪪</span>
+            <span class="sk-icon"><img src="assets/icons/billions.png" alt="Billions Wallet" loading="lazy" /></span>
             <span class="sk-cat sk-cat-identity">Identity</span>
           </div>
           <h3 class="sk-name">Billions Wallet</h3>
@@ -607,7 +714,7 @@
         <!-- Tria Wallet -->
         <a href="https://app.tria.so/?accessCode=30T0TM40OP" target="_blank" rel="noopener" class="stack-card reveal">
           <div class="sk-top">
-            <span class="sk-icon">🔐</span>
+            <span class="sk-icon"><img src="assets/icons/tria.webp" alt="Tria Wallet" loading="lazy" /></span>
             <span class="sk-cat sk-cat-identity">DeFi Wallet</span>
           </div>
           <h3 class="sk-name">Tria Wallet</h3>
@@ -619,7 +726,7 @@
         <!-- SoSoValue -->
         <a href="https://sosovalue.com/join/86UQF1AW" target="_blank" rel="noopener" class="stack-card reveal">
           <div class="sk-top">
-            <span class="sk-icon">📊</span>
+            <span class="sk-icon"><img src="assets/icons/sosovalue.png" alt="SoSoValue" loading="lazy" /></span>
             <span class="sk-cat sk-cat-research">Research</span>
           </div>
           <h3 class="sk-name">SoSoValue</h3>
@@ -631,7 +738,7 @@
         <!-- SoDEX -->
         <a href="https://sodex.com/join/OKES" target="_blank" rel="noopener" class="stack-card reveal">
           <div class="sk-top">
-            <span class="sk-icon">📈</span>
+            <span class="sk-icon"><img src="assets/icons/sodex.png" alt="SoDEX" loading="lazy" /></span>
             <span class="sk-cat sk-cat-research">DEX</span>
           </div>
           <h3 class="sk-name">SoDEX</h3>
@@ -643,6 +750,10 @@
       </div>
     </div>
   </section>
+
+  </div><!-- /stack -->
+
+  </main><!-- /page-stack -->
 
   <!-- FLOATING TELEGRAM -->
   <a href="https://t.me/kryptickryp" target="_blank" rel="noopener" class="tg-float" aria-label="Join Kryptic Krypto on Telegram">
@@ -691,6 +802,6 @@
     </div>
   </footer>
 
-  <script src="main.js"></script>
+  <script src="main.js?v=6"></script>
 </body>
 </html>
