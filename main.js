@@ -112,6 +112,8 @@ const revealEls = [
   { sel: '.about-right',        delay: 1 },
   { sel: '.eco-card',           delay: 'stagger' },
   { sel: '.stack-card',         delay: 'stagger' },
+  { sel: '.contact-info',       delay: 0 },
+  { sel: '.contact-form',       delay: 1 },
   { sel: '.footer-grid',        delay: 0 },
 ];
 
@@ -133,6 +135,38 @@ const io = new IntersectionObserver(entries => {
 }, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
 
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// ── Contact form → mailto ─────────────────────────────────────
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', e => {
+    e.preventDefault();
+    const f = e.target;
+    const name = (f.name.value || '').trim();
+    const email = (f.email.value || '').trim();
+    const subject = (f.subject.value || 'Inquiry').trim();
+    const message = (f.message.value || '').trim();
+
+    if (!name || !email || !message) {
+      f.reportValidity();
+      return;
+    }
+
+    const mailSubject = `[${subject}] from ${name}`;
+    const mailBody =
+      `Hi Enoch,\n\n` +
+      `${message}\n\n` +
+      `— ${name}\n` +
+      `Reply to: ${email}`;
+
+    const mailto =
+      `mailto:okedereenoch@gmail.com` +
+      `?subject=${encodeURIComponent(mailSubject)}` +
+      `&body=${encodeURIComponent(mailBody)}`;
+
+    window.location.href = mailto;
+  });
+}
 
 // ── Work filter tabs ──────────────────────────────────────────
 const filterTabs = document.querySelectorAll('.filter-tab');
