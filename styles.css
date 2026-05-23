@@ -69,7 +69,7 @@ body::after {
   pointer-events: none;
   z-index: 0;
 }
-body > *:not(.bg-marquee) { position: relative; z-index: 2; }
+body > *:not(.bg-marquee):not(.tg-float):not(#nav) { position: relative; z-index: 2; }
 
 /* ============================================================
    AMBIENT BACKGROUND MARQUEE — dimmed work imagery
