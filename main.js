@@ -15,62 +15,46 @@ if (burger && drawer) {
   });
 }
 
-// ── Multi-page navigation ─────────────────────────────────────
+// ── Single-page smooth scroll navigation ──────────────────────
 const pages = document.querySelectorAll('.page');
 const navLinks = document.querySelectorAll('.nav-links a, .d-link');
 
-function showPage(name, opts = {}) {
-  const { pushHistory = true } = opts;
-  const target = name && document.querySelector(`.page[data-page="${name}"]`) ? name : 'home';
-
-  pages.forEach(p => p.classList.toggle('is-active', p.dataset.page === target));
-
-  // Update nav active states
-  navLinks.forEach(a => {
-    const href = (a.getAttribute('href') || '').replace('#', '');
-    a.classList.toggle('is-active', href === target);
-  });
+function scrollToPage(name, opts = {}) {
+  const { pushHistory = true, behavior = 'smooth' } = opts;
 
   // Close mobile drawer if open
   drawer?.classList.remove('open');
 
-  // Scroll to top of new page instantly
-  document.documentElement.style.scrollBehavior = 'auto';
-  window.scrollTo(0, 0);
-  // Restore smooth scroll for any in-page anchors
-  requestAnimationFrame(() => {
-    document.documentElement.style.scrollBehavior = '';
-  });
+  if (name === 'home') {
+    window.scrollTo({ top: 0, behavior });
+  } else {
+    const target = document.querySelector(`.page[data-page="${name}"]`);
+    if (!target) return;
+    target.scrollIntoView({ behavior, block: 'start' });
+  }
 
   // Update URL
   if (pushHistory) {
-    const newUrl = target === 'home' ? location.pathname : `${location.pathname}#${target}`;
-    history.pushState({ page: target }, '', newUrl);
-  }
-
-  // Re-trigger scroll reveals within the new page
-  const activePage = document.querySelector('.page.is-active');
-  if (activePage) {
-    activePage.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+    const newUrl = name === 'home' ? location.pathname : `${location.pathname}#${name}`;
+    history.pushState({ page: name }, '', newUrl);
   }
 }
 
-// Intercept all internal hash links (nav, drawer, hero CTAs)
+// Intercept internal hash links (nav, drawer, hero CTAs, floating buttons)
 document.addEventListener('click', e => {
   const a = e.target.closest('a[href^="#"], a[href="/"]');
   if (!a) return;
   const href = a.getAttribute('href');
-  // Skip pure "#" no-op anchors that don't map to a page (rare)
-  if (href === '#' || href === '/') {
+  if (href === '#' || href === '/' || href === '#home') {
     e.preventDefault();
-    showPage('home');
+    scrollToPage('home');
     return;
   }
   if (href.startsWith('#')) {
     const target = href.slice(1);
     if (document.querySelector(`.page[data-page="${target}"]`)) {
       e.preventDefault();
-      showPage(target);
+      scrollToPage(target);
     }
   }
 });
@@ -78,20 +62,34 @@ document.addEventListener('click', e => {
 // Browser back/forward
 window.addEventListener('popstate', () => {
   const hash = (location.hash || '').replace('#', '') || 'home';
-  showPage(hash, { pushHistory: false });
+  scrollToPage(hash, { pushHistory: false });
 });
 
-// Initial page from URL hash — handle browser's hash-anchor auto-scroll
+// Initial page from URL hash — jump instantly (no smooth animation on load)
 {
   const initialHash = (location.hash || '').replace('#', '') || 'home';
-  showPage(initialHash, { pushHistory: false });
-  // Browser auto-scrolls to id="X" when URL has #X — override it
-  const killScroll = () => window.scrollTo(0, 0);
-  killScroll();
-  requestAnimationFrame(killScroll);
-  setTimeout(killScroll, 0);
-  setTimeout(killScroll, 80);
+  if (initialHash !== 'home') {
+    // Wait for layout + reveals to settle, then jump
+    requestAnimationFrame(() => {
+      scrollToPage(initialHash, { pushHistory: false, behavior: 'auto' });
+    });
+  }
 }
+
+// Active nav highlight based on scroll position
+const pageObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const pageName = entry.target.dataset.page;
+      navLinks.forEach(a => {
+        const href = (a.getAttribute('href') || '').replace('#', '');
+        a.classList.toggle('is-active', href === pageName);
+      });
+    }
+  });
+}, { rootMargin: '-30% 0px -60% 0px', threshold: 0 });
+
+pages.forEach(p => pageObserver.observe(p));
 
 // ── Scroll reveal ─────────────────────────────────────────────
 const revealEls = [
