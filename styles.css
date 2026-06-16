@@ -687,6 +687,37 @@ a { color: inherit; text-decoration: none; }
 }
 .work-card[data-cat].fade-out { opacity: 0.18; transform: scale(0.98); pointer-events: none; }
 
+/* Featured work card — full width, horizontal (image left, info right) */
+.work-card.work-featured {
+  grid-column: 1 / -1;
+  flex-direction: row;
+}
+.work-card.work-featured .wc-visual {
+  width: 56%;
+  height: auto;
+  min-height: 320px;
+  border-bottom: none;
+  border-right: 1px solid var(--border);
+}
+.work-card.work-featured .wc-info {
+  width: 44%;
+  justify-content: center;
+  padding: 40px;
+}
+.work-card.work-featured .wc-title { font-size: 30px; }
+.work-card.work-featured .wc-desc { font-size: 15px; }
+@media (max-width: 760px) {
+  .work-card.work-featured { flex-direction: column; }
+  .work-card.work-featured .wc-visual {
+    width: 100%;
+    min-height: 220px;
+    height: 220px;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+  .work-card.work-featured .wc-info { width: 100%; padding: 28px; }
+}
+
 /* Visual panel — image-based */
 .wc-visual {
   position: relative;
@@ -750,6 +781,7 @@ a { color: inherit; text-decoration: none; }
 .work-card[data-brand="spindrop"]  .wc-visual { color: #14F195; background: radial-gradient(ellipse at center, rgba(20,241,149,0.10), rgba(34,197,94,0.04) 70%); }
 .work-card[data-brand="billions"]  .wc-visual { color: #C084FC; background: radial-gradient(ellipse at center, rgba(192,132,252,0.12), rgba(124,58,237,0.05) 70%); }
 .work-card[data-brand="kiichain"]  .wc-visual { color: #5EEAEA; background: radial-gradient(ellipse at center, rgba(94,234,234,0.10), rgba(20,225,225,0.04) 70%); }
+.work-card[data-brand="football"]  .wc-visual { color: #FB923C; background: radial-gradient(ellipse at center, rgba(251,146,60,0.10), rgba(37,99,235,0.05) 70%); }
 
 /* Info area */
 .wc-info { padding: 28px; display: flex; flex-direction: column; gap: 12px; flex: 1; }
