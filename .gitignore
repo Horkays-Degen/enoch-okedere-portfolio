@@ -26,3 +26,11 @@ build/
 .env
 .env.local
 .env.*.local
+
+# Personal / unrelated working files (kept locally, not part of the site)
+IMG_*.jpeg
+IMG_*.jpg
+birthday.html
+couple_beach.jpg
+solana summit photos/
+"solana summit photos "/
