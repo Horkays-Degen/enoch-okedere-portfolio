@@ -69,7 +69,23 @@ body::after {
   pointer-events: none;
   z-index: 0;
 }
-body > *:not(.bg-marquee):not(.tg-float):not(.contact-float):not(#nav) { position: relative; z-index: 2; }
+body > *:not(.bg-marquee):not(.bg-video):not(.tg-float):not(.contact-float):not(#nav) { position: relative; z-index: 2; }
+
+/* Ambient video layer — the deepest background, dimmed behind everything */
+.bg-video {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.10;
+  filter: blur(2px) saturate(1.15);
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .bg-video { display: none; }
+}
 
 /* ============================================================
    AMBIENT BACKGROUND MARQUEE — dimmed work imagery
@@ -80,7 +96,7 @@ body > *:not(.bg-marquee):not(.tg-float):not(.contact-float):not(#nav) { positio
   z-index: 1;
   pointer-events: none;
   overflow: hidden;
-  opacity: 0.08;
+  opacity: 0.055;
   filter: blur(2.5px) saturate(1.2);
   mix-blend-mode: lighten;
 }

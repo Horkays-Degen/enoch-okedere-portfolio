@@ -34,3 +34,9 @@ birthday.html
 couple_beach.jpg
 solana summit photos/
 "solana summit photos "/
+
+# Raw source video clips + skill zip (kept locally; compressed versions ship in assets/)
+video for portfolio design/
+*.zip
+ChatGPT Image*.png
+Untitled design*.png
