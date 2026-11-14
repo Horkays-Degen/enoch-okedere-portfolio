@@ -596,6 +596,8 @@ a { color: inherit; text-decoration: none; }
 /* Per-brand color treatment */
 .m-mark[data-brand="billions"]  { background: rgba(168,85,247,0.12); border: 1px solid rgba(168,85,247,0.45); color: #C084FC; box-shadow: 0 0 16px rgba(168,85,247,0.18) inset; }
 .m-mark[data-brand="kiichain"]  { background: rgba(20,225,225,0.10); border: 1px solid rgba(20,225,225,0.45); color: #5EEAEA; box-shadow: 0 0 16px rgba(20,225,225,0.18) inset; }
+.m-mark[data-brand="bnb"]       { background: rgba(243,186,47,0.12); border: 1px solid rgba(243,186,47,0.5); color: #F3BA2F; box-shadow: 0 0 16px rgba(243,186,47,0.2) inset; }
+.m-mark[data-brand="actionmodel"] { background: rgba(145,0,255,0.14); border: 1px solid rgba(145,0,255,0.5); color: #B24BFF; box-shadow: 0 0 16px rgba(145,0,255,0.2) inset; }
 .m-mark[data-brand="solana"]    { background: linear-gradient(135deg, rgba(153,69,255,0.20), rgba(20,241,149,0.20)); border: 1px solid rgba(153,69,255,0.45); color: #fff; box-shadow: 0 0 16px rgba(153,69,255,0.2) inset; }
 .m-mark[data-brand="abstract"]  { background: rgba(80,255,152,0.10); border: 1px solid rgba(80,255,152,0.45); color: #50FF98; box-shadow: 0 0 16px rgba(80,255,152,0.18) inset; }
 .m-mark[data-brand="polygon"]   { background: rgba(130,71,229,0.14); border: 1px solid rgba(130,71,229,0.5); color: #A78BFA; box-shadow: 0 0 16px rgba(130,71,229,0.18) inset; }
@@ -797,6 +799,7 @@ a { color: inherit; text-decoration: none; }
 .work-card[data-brand="spindrop"]  .wc-visual { color: #14F195; background: radial-gradient(ellipse at center, rgba(20,241,149,0.10), rgba(34,197,94,0.04) 70%); }
 .work-card[data-brand="billions"]  .wc-visual { color: #C084FC; background: radial-gradient(ellipse at center, rgba(192,132,252,0.12), rgba(124,58,237,0.05) 70%); }
 .work-card[data-brand="kiichain"]  .wc-visual { color: #5EEAEA; background: radial-gradient(ellipse at center, rgba(94,234,234,0.10), rgba(20,225,225,0.04) 70%); }
+.work-card[data-brand="bnb"]       .wc-visual { color: #F3BA2F; background: radial-gradient(ellipse at center, rgba(243,186,47,0.12), rgba(243,186,47,0.03) 70%); }
 .work-card[data-brand="football"]  .wc-visual { color: #FB923C; background: radial-gradient(ellipse at center, rgba(251,146,60,0.10), rgba(37,99,235,0.05) 70%); }
 
 /* Info area */
@@ -1258,6 +1261,8 @@ a { color: inherit; text-decoration: none; }
 
 /* Per-chain accent colors (sets `color` on .eco-card, used by all currentColor refs) */
 .eco-card[data-chain="abstract"]  { color: #50FF98; }
+.eco-card[data-chain="bnb"]       { color: #F3BA2F; }
+.eco-card[data-chain="actionmodel"] { color: #B24BFF; }
 .eco-card[data-chain="polygon"]   { color: #A78BFA; }
 .eco-card[data-chain="kiichain"]  { color: #5EEAEA; }
 .eco-card[data-chain="solana"]    { color: #C084FC; }
