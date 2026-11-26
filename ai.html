@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Films · Enoch Okedere</title>
+  <meta name="description" content="Original AI films, recurring characters and AI tutorials by Enoch Okedere: CT Academy, BLOKYZ, Pudgy, Marvin and brand films, made with ChatGPT, Claude Code, ChatCut and Seedance." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <meta name="theme-color" content="#f5f4f0" />
+  <meta property="og:title" content="AI Films · Enoch Okedere" />
+  <meta property="og:description" content="Original AI shorts and recurring characters, plus the tutorials that show how they are made." />
+  <meta property="og:url" content="https://enochokedere.com/ai" />
+  <meta property="og:image" content="https://enochokedere.com/assets/og-card.jpg?v=2" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@horkays" />
+  <link rel="canonical" href="https://enochokedere.com/ai" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+    :root { --bg:#f5f4f0; --card:rgba(255,255,255,0.66); --line:rgba(17,17,20,0.09); --text:#111114; --mute:#55555d; --dim:#8b8b93; --ink:#111114; --accent:#8c6a3f; --shadow:0 1px 2px rgba(17,17,20,0.04), 0 12px 34px rgba(17,17,20,0.06); }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; }
+    body { background:var(--bg); color:var(--text); font-family:Geist,Inter,system-ui,sans-serif; line-height:1.55; -webkit-font-smoothing:antialiased; overflow-x:hidden; overflow-x:clip; }
+    ::selection { background:rgba(140,106,63,0.2); }
+    /* moving reel behind everything, under a white glass veil */
+    .bg-video { position:fixed; inset:0; width:100%; height:100%; object-fit:cover; z-index:0; opacity:0.16; filter:blur(3px) grayscale(0.85); mix-blend-mode:multiply; pointer-events:none; }
+    .bg-veil { position:fixed; inset:0; z-index:1; pointer-events:none; background:radial-gradient(800px 560px at 88% -10%, rgba(214,190,150,0.30), transparent 65%), radial-gradient(760px 560px at -10% 30%, rgba(170,190,215,0.26), transparent 65%), linear-gradient(180deg, rgba(245,244,240,0.55), rgba(245,244,240,0.35) 45%, rgba(245,244,240,0.62)); }
+    @media (prefers-reduced-motion: reduce) { .bg-video { display:none; } }
+    a { color:inherit; text-decoration:none; }
+    .wrap { position:relative; z-index:2; max-width:1120px; margin:0 auto; padding:0 24px; }
+    .top { display:flex; justify-content:space-between; align-items:center; padding:22px 0; }
+    .back { font-family:'Geist Mono',monospace; font-size:13px; color:var(--mute); }
+    .back:hover { color:var(--text); }
+    .me { display:flex; align-items:center; gap:10px; font-weight:600; font-size:14px; padding:5px 14px 5px 5px; border-radius:999px; background:rgba(255,255,255,0.7); border:1px solid var(--line); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); }
+    .me img { width:30px; height:30px; border-radius:50%; object-fit:cover; }
+    header { padding:52px 0 30px; }
+    .eyebrow { font-family:'Geist Mono',monospace; font-size:12.5px; letter-spacing:1.5px; color:var(--accent); text-transform:uppercase; }
+    h1 { font-family:'Instrument Serif',Georgia,serif; font-weight:400; font-size:clamp(44px,7.4vw,86px); line-height:1.0; letter-spacing:-1px; margin:16px 0 20px; max-width:900px; }
+    h1 i { color:var(--accent); }
+    .lede { max-width:700px; color:var(--mute); font-size:17.5px; }
+    .lede b { color:var(--text); font-weight:600; }
+    .how { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin:34px 0 8px; }
+    .how div { border:1px solid var(--line); background:var(--card); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border-radius:16px; padding:16px; box-shadow:var(--shadow); }
+    .how span { display:block; font-family:'Geist Mono',monospace; font-size:11.5px; color:var(--accent); letter-spacing:1px; margin-bottom:6px; }
+    .how p { font-size:14px; color:var(--mute); }
+    .jump { display:flex; flex-wrap:wrap; gap:8px; margin-top:22px; }
+    .jump a { font-size:13px; font-weight:500; padding:7px 14px; border-radius:999px; border:1px solid var(--line); background:rgba(255,255,255,0.7); }
+    .jump a:hover { border-color:rgba(17,17,20,0.25); }
+    h2 { font-family:'Instrument Serif',Georgia,serif; font-weight:400; font-size:clamp(32px,4vw,44px); line-height:1.1; margin:64px 0 8px; scroll-margin-top:20px; }
+    h2 i { color:var(--accent); }
+    .sub { color:var(--mute); font-size:15px; margin-bottom:22px; max-width:640px; }
+    .grid { display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
+    .grid.four { grid-template-columns:repeat(4,1fr); }
+    .card { border:1px solid var(--line); background:var(--card); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border-radius:22px; overflow:hidden; display:flex; flex-direction:column; box-shadow:var(--shadow); transition:border-color .25s, transform .25s, box-shadow .25s; }
+    .card:hover { border-color:rgba(17,17,20,0.2); transform:translateY(-3px); box-shadow:0 2px 4px rgba(17,17,20,0.05), 0 18px 44px rgba(17,17,20,0.09); }
+    .card.wide { grid-column:1 / -1; flex-direction:row; }
+    .card.wide .thumb { flex:1.35; aspect-ratio:16/9; }
+    .card.wide .body { flex:1; justify-content:center; padding:28px; }
+    .thumb { position:relative; aspect-ratio:16/9; background:#111 center/cover no-repeat; display:block; overflow:hidden; }
+    .thumb.tall { aspect-ratio:9/16; }
+    .thumb video, .thumb iframe, .thumb > img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; border:0; display:block; }
+    .thumb.link::after { content:""; position:absolute; inset:0; background:linear-gradient(180deg,transparent 55%,rgba(10,10,10,0.55)); pointer-events:none; }
+    .pill { position:absolute; left:12px; top:12px; z-index:2; font-family:'Geist Mono',monospace; font-size:10.5px; letter-spacing:1px; padding:5px 10px; border-radius:999px; background:rgba(255,255,255,0.88); color:var(--ink); backdrop-filter:blur(8px); pointer-events:none; }
+    .sound { position:absolute; right:12px; bottom:12px; z-index:3; font-family:'Geist Mono',monospace; font-size:10.5px; letter-spacing:.5px; padding:6px 10px; border-radius:999px; background:rgba(10,10,10,0.62); color:#fff; border:1px solid rgba(255,255,255,0.25); cursor:pointer; backdrop-filter:blur(8px); }
+    .sound:hover { background:rgba(10,10,10,0.8); }
+    .play { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); z-index:2; width:54px; height:54px; border-radius:50%; background:rgba(255,255,255,0.92); display:grid; place-items:center; box-shadow:0 8px 28px rgba(0,0,0,0.25); }
+    .play svg { width:20px; height:20px; margin-left:3px; }
+    .body { padding:18px 20px 20px; display:flex; flex-direction:column; gap:8px; flex:1; }
+    .meta { font-family:'Geist Mono',monospace; font-size:11px; color:var(--dim); letter-spacing:.5px; text-transform:uppercase; }
+    h3 { font-size:19px; font-weight:600; letter-spacing:-.2px; line-height:1.25; }
+    .card.wide h3 { font-family:'Instrument Serif',Georgia,serif; font-weight:400; font-size:32px; letter-spacing:0; }
+    .body p { font-size:14.5px; color:var(--mute); }
+    .grid.four .body { padding:14px 16px 16px; }
+    .grid.four h3 { font-size:15.5px; }
+    .grid.four .body p { font-size:13.5px; }
+    .nums { display:flex; flex-wrap:wrap; gap:8px; margin-top:2px; }
+    .nums span { font-size:12px; padding:4px 10px; border-radius:999px; border:1px solid var(--line); color:var(--mute); background:rgba(255,255,255,0.6); }
+    .links { display:flex; flex-wrap:wrap; gap:16px; margin-top:auto; padding-top:6px; }
+    .links a { font-size:14px; font-weight:600; color:var(--ink); border-bottom:1px solid rgba(17,17,20,0.25); }
+    .links a:hover { border-color:var(--accent); color:var(--accent); }
+    .cta { margin:70px 0 30px; border:1px solid var(--line); border-radius:24px; padding:34px; background:rgba(255,255,255,0.72); backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px); box-shadow:var(--shadow); display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap; }
+    .cta h3 { font-family:'Instrument Serif',Georgia,serif; font-weight:400; font-size:32px; }
+    .cta p { color:var(--mute); font-size:15px; margin-top:4px; }
+    .btns { display:flex; gap:10px; flex-wrap:wrap; }
+    .btn { padding:12px 20px; border-radius:999px; font-weight:600; font-size:14px; border:1px solid var(--line); background:rgba(255,255,255,0.8); }
+    .btn:hover { border-color:rgba(17,17,20,0.25); }
+    .btn.ink { background:var(--ink); color:#fff; border-color:var(--ink); }
+    .btn.ink:hover { background:#2b2b30; }
+    footer { padding:26px 0 50px; color:var(--dim); font-size:13px; }
+    @media (max-width:900px) { .grid.four { grid-template-columns:repeat(2,1fr); } }
+    @media (max-width:820px) { .grid { grid-template-columns:1fr; } .card.wide { flex-direction:column; } .card.wide .thumb { flex:none; } .card.wide .body { padding:20px; } .how { grid-template-columns:1fr 1fr; } header { padding-top:30px; } }
+    @media (max-width:480px) { .wrap { padding:0 16px; } .how { grid-template-columns:1fr; } .grid.four { gap:12px; } .cta { padding:24px; } }
+  </style>
+</head>
+<body>
+<video class="bg-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true" tabindex="-1" poster="assets/ai/blokyz-someday.jpg">
+  <source src="assets/ai/blokyz-someday.mp4" type="video/mp4" />
+</video>
+<div class="bg-veil" aria-hidden="true"></div>
+
+<div class="wrap">
+
+  <div class="top">
+    <a class="back" href="/">← enochokedere.com</a>
+    <a class="me" href="https://x.com/horkays" target="_blank" rel="noopener"><img src="assets/photo.jpg" alt="" />Enoch Okedere</a>
+  </div>
+
+  <header>
+    <div class="eyebrow">[ AI films and characters ]</div>
+    <h1>Stories, characters and explainers, <i>made with AI.</i></h1>
+    <p class="lede">I write, direct and edit original AI shorts, then show people how to make their own. Characters start as profiles and turnaround sheets in <b>ChatGPT</b>, scenes are generated with <b>Seedance</b> inside <b>ChatCut</b>, and <b>Claude Code</b> runs the edit, captions and motion graphics. Every clip below plays right here.</p>
+    <div class="how">
+      <div><span>01 · CHARACTER</span><p>A locked profile and reference sheet, so the face never drifts.</p></div>
+      <div><span>02 · SCENES</span><p>Shot lists and prompts, generated from approved references.</p></div>
+      <div><span>03 · EDIT</span><p>Cut, sound, captions and motion graphics in ChatCut.</p></div>
+      <div><span>04 · SHIP</span><p>Cut for X and YouTube, posted with the process behind it.</p></div>
+    </div>
+    <nav class="jump" aria-label="Sections">
+      <a href="#series">Series</a>
+      <a href="#shorts">Aura farming shorts</a>
+      <a href="#brand">Brand films</a>
+      <a href="#youtube">AI on YouTube</a>
+    </nav>
+  </header>
+
+  <!-- ============ SERIES ============ -->
+  <h2 id="series">Recurring <i>series</i></h2>
+  <p class="sub">Characters that come back episode after episode, with the same face, outfit and voice.</p>
+  <div class="grid">
+
+    <article class="card wide">
+      <div class="thumb">
+        <video data-src="assets/ai/ct-academy-ep2.mp4" poster="assets/ai/ct-academy-ep2.jpg" muted loop playsinline preload="none"></video>
+        <span class="pill">CT ACADEMY · EPISODE 2</span>
+        <button class="sound" type="button">Sound on</button>
+      </div>
+      <div class="body">
+        <div class="meta">Nov 2026 · Anime series · 39s</div>
+        <h3>CT Academy: After the Bell</h3>
+        <p>An anime school where every lesson is a crypto lesson. Episode 2, "Proof of Utility", picks up after class with a hack headline and a clapback ending.</p>
+        <div class="links">
+          <a href="https://x.com/horkays/status/2117176785393553544" target="_blank" rel="noopener">Episode 1 on X ↗</a>
+          <a href="https://x.com/horkays/status/2116582212925620688" target="_blank" rel="noopener">The teaser ↗</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="thumb">
+        <video data-src="assets/ai/ct-academy-pilot.mp4" poster="assets/ai/ct-academy-pilot.jpg" muted loop playsinline preload="none"></video>
+        <span class="pill">CT ACADEMY · PILOT</span>
+        <button class="sound" type="button">Sound on</button>
+      </div>
+      <div class="body">
+        <div class="meta">Oct 2026 · Pilot · 10s</div>
+        <h3>"My alarm got liquidated"</h3>
+        <p>The pilot that set the look for the series: one teacher, one bad trade, ten seconds.</p>
+        <div class="links"><a href="https://x.com/horkays/status/2117176785393553544" target="_blank" rel="noopener">Watch Episode 1 on X ↗</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="thumb">
+        <video data-src="assets/ai/blokyz-breach.mp4" poster="assets/ai/blokyz-breach.jpg" muted loop playsinline preload="none"></video>
+        <span class="pill">BLOKYZ · CLIP 01</span>
+        <button class="sound" type="button">Sound on</button>
+      </div>
+      <div class="body">
+        <div class="meta">Sep 2026 · Elemental duel · 10s</div>
+        <h3>BLOKYZ: The Breach</h3>
+        <p>The opening of the BLOKYZ elemental duel, built around approved hero, rival and temple references.</p>
+        <div class="links"><a href="https://x.com/horkays/status/2114582366299517263" target="_blank" rel="noopener">Watch on X ↗</a></div>
+      </div>
+    </article>
+
+    <article class="card wide">
+      <div class="thumb">
+        <video data-src="assets/ai/blokyz-elemental-divide.mp4" poster="assets/ai/blokyz-elemental-divide.jpg" muted loop playsinline preload="none"></video>
+        <span class="pill">BLOKYZ · FULL FILM</span>
+        <button class="sound" type="button">Sound on</button>
+      </div>
+      <div class="body">
+        <div class="meta">Oct 2026 · Short film · 1m 20s</div>
+        <h3>BLOKYZ: Elemental Divide</h3>
+        <p>The full fight. Fire against ice, one rival, and a character that stays on model across every shot.</p>
+        <div class="links"><a href="https://x.com/horkays" target="_blank" rel="noopener">More BLOKYZ on X ↗</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="thumb">
+        <video data-src="assets/ai/blokyz-someday.mp4" poster="assets/ai/blokyz-someday.jpg" muted loop playsinline preload="none"></video>
+        <span class="pill">BLOKYZ · SOMEDAY</span>
+        <button class="sound" type="button">Sound on</button>
+      </div>
+      <div class="body">
+        <div class="meta">Oct 2026 · Short film · 54s</div>
+        <h3>BLOKYZ: Someday</h3>
+        <p>A quieter BLOKYZ story about friends, a long road and golden hour light.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="thumb">
+        <video data-src="assets/ai/antseed-cottage.mp4" poster="assets/ai/antseed-cottage.jpg" muted loop playsinline preload="none"></video>
+        <span class="pill">PUDGY × BLOKYZ</span>
+        <button class="sound" type="button">Sound on</button>
+      </div>
+      <div class="body">
+        <div class="meta">Oct 2026 · Made on Antseed · 22s</div>
+        <h3>The cottage transformation</h3>
+        <p>BLOKYZ walks into a cottage, my Pudgy walks out, and autumn turns into winter. Generated on Antseed with Seedance 2.5.</p>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- ============ SHORTS ============ -->
+  <h2 id="shorts">Aura farming <i>shorts</i></h2>
+  <p class="sub">Small, cinematic character moments made to stop the scroll.</p>
+  <div class="grid">
+
+    <article class="card">
+      <div class="thumb">
+        <video data-src="assets/ai/marvin.mp4" poster="assets/ai/marvin.jpg" muted loop playsinline preload="none"></video>
+        <span class="pill">MARVIN</span>
+        <button class="sound" type="button">Sound on</button>
+      </div>
+      <div class="body">
+        <div class="meta">Nov 2026 · Seedance 2.5 · 24s</div>
+        <h3>Marvin: Serious Decisions</h3>
+        <p>A call from a washed KOL, or GTA VI? Nine shots, one take, one very clear choice.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="thumb">
+        <video data-src="assets/ai/pudy-at-my-worst.mp4" poster="assets/ai/pudy-at-my-worst.jpg" muted loop playsinline preload="none"></video>
+        <span class="pill">PUDY</span>
+        <button class="sound" type="button">Sound on</button>
+      </div>
+      <div class="body">
+        <div class="meta">Nov 2026 · Seedance 2.5 · 20s</div>
+        <h3>Pudy: At My Worst</h3>
+        <p>A rainy evening, a letter and a penguin having a hard day. Cut to music for the emotional beat.</p>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="grid four" style="margin-top:18px">
+
+    <article class="card">
+      <div class="thumb tall">
+        <video data-src="assets/ai/pudgy-forest-rider.mp4" poster="assets/ai/pudgy-forest-rider.jpg" muted loop playsinline preload="none"></video>
+        <span class="pill">VERTICAL</span>
+        <button class="sound" type="button">Sound on</button>
+      </div>
+      <div class="body">
+        <div class="meta">Nov 2026 · 18s</div>
+        <h3>Little Pudgy: Forest Rider</h3>
+        <p>My Pudgy PFP, riding through a misty forest.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="thumb tall">
+        <video data-src="assets/ai/little-light.mp4" poster="assets/ai/little-light.jpg" muted loop playsinline preload="none"></video>
+        <span class="pill">VERTICAL</span>
+        <button class="sound" type="button">Sound on</button>
+      </div>
+      <div class="body">
+        <div class="meta">Nov 2026 · 10s</div>
+        <h3>The Little Light</h3>
+        <p>A fox, a forest and one small glow.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="thumb tall">
+        <video data-src="assets/ai/future-city-drive.mp4" poster="assets/ai/future-city-drive.jpg" muted loop playsinline preload="none" style="object-position:40% 50%"></video>
+        <span class="pill">CARS</span>
+        <button class="sound" type="button">Sound on</button>
+      </div>
+      <div class="body">
+        <div class="meta">Nov 2026 · 10s</div>
+        <h3>Future City Drive</h3>
+        <p>A widebody build cruising through a city that does not exist.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="thumb tall">
+        <video data-src="assets/ai/dormark-awakening.mp4" poster="assets/ai/dormark-awakening.jpg" muted loop playsinline preload="none"></video>
+        <span class="pill">CINEMATIC</span>
+        <button class="sound" type="button">Sound on</button>
+      </div>
+      <div class="body">
+        <div class="meta">Sep 2026 · 38s</div>
+        <h3>Dormark: The Awakening</h3>
+        <p>A dark fantasy trailer cut in 4K.</p>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- ============ BRAND ============ -->
+  <h2 id="brand">Brand <i>films</i></h2>
+  <p class="sub">The same character pipeline, pointed at a real product.</p>
+  <div class="grid">
+
+    <article class="card wide">
+      <div class="thumb">
+        <video data-src="assets/ai/axis-next-phase.mp4" poster="assets/ai/axis-next-phase.jpg" muted loop playsinline preload="none"></video>
+        <span class="pill">AXIS ROBOTICS</span>
+        <button class="sound" type="button">Sound on</button>
+      </div>
+      <div class="body">
+        <div class="meta">Oct 2026 · Brand film · 27s</div>
+        <h3>Axis Robotics: The Next Phase</h3>
+        <p>BLOKYZ and Yapybara close one chapter and walk into the next one, inside a robotics lab. A connected two-scene film with a custom soundtrack, made to go with my Axis Robotics guide.</p>
+        <div class="links"><a href="https://www.youtube.com/watch?v=ITFX1B4GoVU" target="_blank" rel="noopener">The Axis Robotics guide ↗</a></div>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- ============ YOUTUBE ============ -->
+  <h2 id="youtube">AI on <i>YouTube</i></h2>
+  <p class="sub">Tutorials and breakdowns: building with Claude Code, clipping with AI, and the agents that use your computer for you.</p>
+  <div class="grid">
+
+    <article class="card wide">
+      <div class="thumb">
+        <iframe src="https://www.youtube.com/embed/X1jjbkfqWHA" title="What I Built With Fable 5 Before They Shut It Down (Claude Code)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
+      <div class="body">
+        <div class="meta">Jun 2026 · Claude Code · 21 min</div>
+        <h3>What I built with Fable 5 before they shut it down</h3>
+        <p>A full walkthrough of the apps and sites I shipped with Claude Code, including the World Cup streaming tool and this portfolio.</p>
+        <div class="links"><a href="https://www.youtube.com/watch?v=X1jjbkfqWHA" target="_blank" rel="noopener">Watch on YouTube ↗</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <a class="thumb link" href="https://www.youtube.com/watch?v=Spf0Wj8k09E" target="_blank" rel="noopener">
+        <img src="https://img.youtube.com/vi/Spf0Wj8k09E/maxresdefault.jpg" alt="" loading="lazy" onerror="this.src='https://img.youtube.com/vi/Spf0Wj8k09E/hqdefault.jpg'" />
+        <span class="pill">TUTORIAL</span>
+        <span class="play"><svg viewBox="0 0 24 24" fill="#111"><path d="M8 5v14l11-7z"/></svg></span>
+      </a>
+      <div class="body">
+        <div class="meta">Jun 2026 · OpusClip</div>
+        <h3>How to make money clipping videos with AI</h3>
+        <div class="links"><a href="https://www.youtube.com/watch?v=Spf0Wj8k09E" target="_blank" rel="noopener">Watch ↗</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <a class="thumb link" href="https://www.youtube.com/watch?v=ZBJbwKV0wxo" target="_blank" rel="noopener">
+        <img src="https://img.youtube.com/vi/ZBJbwKV0wxo/maxresdefault.jpg" alt="" loading="lazy" onerror="this.src='https://img.youtube.com/vi/ZBJbwKV0wxo/hqdefault.jpg'" />
+        <span class="pill">AI AGENTS</span>
+        <span class="play"><svg viewBox="0 0 24 24" fill="#111"><path d="M8 5v14l11-7z"/></svg></span>
+      </a>
+      <div class="body">
+        <div class="meta">Oct 2026 · Action Model</div>
+        <h3>This AI uses your computer for you: Actionist explained</h3>
+        <div class="links"><a href="https://www.youtube.com/watch?v=ZBJbwKV0wxo" target="_blank" rel="noopener">Watch ↗</a></div>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="grid four" style="margin-top:18px">
+    <article class="card">
+      <a class="thumb tall link" href="https://www.youtube.com/shorts/SqjFRbr9Ido" target="_blank" rel="noopener">
+        <img src="https://img.youtube.com/vi/SqjFRbr9Ido/hqdefault.jpg" alt="" loading="lazy" />
+        <span class="pill">SHORT</span>
+      </a>
+      <div class="body"><div class="meta">Nov 2026 · 1.2K views</div><h3>OpenAI's agent spent a wallet it didn't own</h3></div>
+    </article>
+    <article class="card">
+      <a class="thumb tall link" href="https://www.youtube.com/shorts/zti7S9dtFgU" target="_blank" rel="noopener">
+        <img src="https://img.youtube.com/vi/zti7S9dtFgU/hqdefault.jpg" alt="" loading="lazy" />
+        <span class="pill">SHORT</span>
+      </a>
+      <div class="body"><div class="meta">Oct 2026</div><h3>Google Genie 4: this isn't a game, it's a text prompt</h3></div>
+    </article>
+    <article class="card">
+      <a class="thumb tall link" href="https://www.youtube.com/shorts/fEyPdsVrJsk" target="_blank" rel="noopener">
+        <img src="https://img.youtube.com/vi/fEyPdsVrJsk/hqdefault.jpg" alt="" loading="lazy" />
+        <span class="pill">SHORT</span>
+      </a>
+      <div class="body"><div class="meta">Jun 2026</div><h3>Build motion graphics with Claude Code</h3></div>
+    </article>
+    <article class="card">
+      <a class="thumb tall link" href="https://www.youtube.com/shorts/CIaZomt-QQk" target="_blank" rel="noopener">
+        <img src="https://img.youtube.com/vi/CIaZomt-QQk/hqdefault.jpg" alt="" loading="lazy" />
+        <span class="pill">SHORT</span>
+      </a>
+      <div class="body"><div class="meta">Jun 2026 · 1.4K views</div><h3>Turn any live stream into viral clips with AI</h3></div>
+    </article>
+  </div>
+
+  <div class="cta">
+    <div>
+      <h3>Want an AI film for your project?</h3>
+      <p>Characters, explainers and brand films, from script to final cut.</p>
+    </div>
+    <div class="btns">
+      <a class="btn ink" href="mailto:okedereenoch@gmail.com?subject=AI%20film">Email me</a>
+      <a class="btn" href="/">Full portfolio</a>
+      <a class="btn" href="https://x.com/horkays" target="_blank" rel="noopener">X</a>
+      <a class="btn" href="https://www.youtube.com/@enochokedere" target="_blank" rel="noopener">YouTube</a>
+    </div>
+  </div>
+
+  <footer>Enoch Okedere · Cologne, Germany · Independent AI and Web3 creator. Characters and brands shown belong to their owners.</footer>
+</div>
+
+<script>
+  // Play clips only while they are on screen; load them on first view.
+  (function () {
+    var vids = document.querySelectorAll('video[data-src]');
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        var v = e.target;
+        if (e.isIntersecting) {
+          if (!v.src) { v.src = v.dataset.src; }
+          var p = v.play(); if (p && p.catch) p.catch(function () {});
+        } else if (!v.paused) { v.pause(); }
+      });
+    }, { threshold: 0.35 });
+    vids.forEach(function (v) { io.observe(v); });
+
+    document.querySelectorAll('.sound').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var v = b.parentElement.querySelector('video');
+        if (!v) return;
+        var turningOn = v.muted;
+        // only one clip speaks at a time
+        document.querySelectorAll('video[data-src]').forEach(function (o) { o.muted = true; });
+        document.querySelectorAll('.sound').forEach(function (o) { o.textContent = 'Sound on'; });
+        if (turningOn) { v.muted = false; v.currentTime = 0; v.play(); b.textContent = 'Mute'; }
+      });
+    });
+  })();
+</script>
+</body>
+</html>
